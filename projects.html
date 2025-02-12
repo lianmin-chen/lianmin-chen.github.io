@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目展示 - 科幻个人空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .project-card {
+            background: rgba(23, 42, 69, 0.8);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-title {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" height="40">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="projects.html">项目</a>
+                <a href="blog.html">博客</a>
+                <a href="about.html">自我介绍</a>
+                <a href="contact.html">联系</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1 class="title">项目展示</h1>
+        
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="项目1" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">AI图像识别系统</h2>
+                <div class="tech-stack">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">TensorFlow</span>
+                    <span class="tech-tag">OpenCV</span>
+                </div>
+                <p class="project-description">
+                    基于深度学习的图像识别系统，能够实时识别和分类物体，准确率达到98%。
+                </p>
+                <a href="#" class="button">查看详情</a>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <img src="images/project1.jpg" alt="项目2" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">虚拟现实展示平台</h2>
+                <div class="tech-stack">
+                    <span class="tech-tag">Unity3D</span>
+                    <span class="tech-tag">C#</span>
+                    <span class="tech-tag">WebGL</span>
+                </div>
+                <p class="project-description">
+                    支持多人在线的VR展示平台，可用于虚拟展览和教育培训。
+                </p>
+                <a href="#" class="button">查看详情</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

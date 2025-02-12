@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>创意图库 - 科幻个人空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            aspect-ratio: 1;
+            cursor: pointer;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 25, 47, 0.9), transparent);
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        .gallery-title {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .gallery-description {
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-button {
+            background: rgba(139, 92, 246, 0.2);
+            border: none;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            color: var(--text-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-button:hover,
+        .filter-button.active {
+            background: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" height="40">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="projects.html">项目</a>
+                <a href="blog.html">博客</a>
+                <a href="gallery.html">图库</a>
+                <a href="contact.html">联系</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1 class="title">创意图库</h1>
+        
+        <div class="filter-buttons">
+            <button class="filter-button active">全部</button>
+            <button class="filter-button">3D设计</button>
+            <button class="filter-button">UI设计</button>
+            <button class="filter-button">概念艺术</button>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/gallery1.jpg" alt="作品1" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">未来城市</h3>
+                    <p class="gallery-description">3D渲染的未来主义城市景观</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery2.jpg" alt="作品2" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">科技界面</h3>
+                    <p class="gallery-description">未来感UI设计概念</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/gallery3.jpg" alt="作品3" class="gallery-image">
+                <div class="gallery-overlay">
+                    <h3 class="gallery-title">机械生命</h3>
+                    <p class="gallery-description">概念机器人设计作品</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自我介绍 - 科幻个人空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 2rem 0;
+        }
+
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 2px solid var(--accent-color);
+        }
+
+        .about-content {
+            background: rgba(23, 42, 69, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .about-section {
+            margin-bottom: 2rem;
+        }
+
+        .about-section h2 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-section p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skill-item {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 0.8rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-3px);
+            background: rgba(139, 92, 246, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" height="40">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="projects.html">项目</a>
+                <a href="blog.html">博客</a>
+                <a href="about.html">自我介绍</a>
+                <a href="contact.html">联系</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <h1 class="title">自我介绍</h1>
+        
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile.png" alt="个人照片">
+            </div>
+            
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>关于我</h2>
+                    <p>你好！我是一名热爱技术的开发者，专注于人工智能和Web开发领域。在过去的几年里，我参与了多个创新项目的开发，并持续学习新的技术。</p>
+                    <p>我相信技术能够改变世界，并致力于创造有价值的解决方案。</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>专业技能</h2>
+                    <div class="skills-grid">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">React</div>
+                        <div class="skill-item">Node.js</div>
+                        <div class="skill-item">机器学习</div>
+                        <div class="skill-item">数据分析</div>
+                    </div>
+                </div>
+
+                <div class="about-section">
+                    <h2>教育背景</h2>
+                    <p>计算机科学与技术 硕士学位</p>
+                    <p>人工智能 学士学位</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>兴趣爱好</h2>
+                    <p>除了编程，我还热爱阅读科技文章、参与开源项目，以及探索新的技术趋势。在空闲时间，我也喜欢通过写博客分享我的技术见解。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
