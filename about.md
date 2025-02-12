@@ -1,52 +1,29 @@
 ---
-title: 'About'
-date: 2018-02-22T17:01:34+07:00
+title: '关于我'
+date: 2024-11-17T17:01:34+07:00
 layout: page
 bodyClass: page-about
 ---
 
-Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
-de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
-crimen habet Priamum nec.
+欢迎来到我的个人网站和博客！我是 Charles，一名对计算机科学，尤其是人工智能充满热情的学生。这个网站是我分享想法、观点和经验的地方，涉及我所关注的各种激励人心的话题。
 
-## Ne verba patulosque numen vix libet
+## Who Am I?
 
-Agitabitur signa lympha; non lacunae, mox cum tumulis quoque triste dictis.
-Ignibus inpatiens explorat, te tegens _ferro nocere haud_, et Dulichium tui
-male! Quo sed [fuit flexit et](#vexant-achivi) hic die solido, gloria?
+我是一名来自中国的学生，热衷于计算机科学。我相信**知识**与**信念**的力量，并尽力将其融入到我所做的一切中。
 
-1. Cum det dixit Parcarum qui spemque est
-2. Exit ex huic
-3. Quod consiste agitataque claustraque vicina videt lacertis
-4. Loquor videt
-5. Ardua non igne caelesti coniugis cognovi diversorum
-6. Per nunc pariterque saeva vindicet
+在这个博客里，我会写下我所思考的某些想法，或者我想要分享的一些知识。我偶尔还会分享一些个人故事和我在这条路上的成长心得，希望能在过程中激励到他人。
 
-Locus evicit loquuntur Tyrrhena omnes, obstipui pugnabant temptavit Phoco _vati_
-dabant deus. Memorata haberet sepulcrales gentisque dum sic, in flumina templa!
-Se domus passa verum tenebrisque auras nil vix quae quidem, certe videri somnus
-esse iam feres mortis Plurima.
+## What You’ll Find Here
 
-## Postquam tamen
+在这个网站上，你可以找到：
 
-Et nec ingentem est minus faciunt praecipue posse auctoremque sedes transmittere
-et pedes miratur erat animaeque. Tellus admonuit humanam funes, sagittis et
-licet! Inserui quamvis Clymeni.
+- 博客文章：我写的关于我热衷话题的文章集合。
+- 个人项目：展示我曾经做过或者正在做的一些项目。
+- 资源：基于我自身经验的有用小贴士、教程和推荐。
 
-- Parens est studiisque interea
-- Pro istis mediis carnes iste nec imperat
-- Te vocas orat nisi quantumque castra
-- Gestumque crepuscula esse videntur coegit
-- Ambo videtque gerat aquae ferens vagina
-- Adde leviter faciam tetigisse regunt concava in
+## My Goals
+我创建这个网站的目标是希望能打造一个分享知识、学习交流的平台，围绕我关心的话题建立一个社区。无论你是来这里学点新东西，寻找灵感，还是只是想了解我的动态，我都希望你能从中找到一些有价值的东西。
 
-Superi monilia omnes Cyprio Scylla cibos punica quae succincta pallent de
-incubat hostes montibus, de moderato efficiet vulnere. Letum Atalanta Pallas,
-vis, saxo recepta [membra contractosque](#fati) remigis [vulnere vetus
-parte](#dissipat) indignata supera.
+## Let’s Connect
 
-Quantum auxilium datus; sed pineta et, iuvenes redito; credas mensae, meum. Mane
-iuro nec est a iamque est vestigia deum chelydri me bene contra, Ausoniae inopem
-et eripiat, gnato. Carpit magno Pharsalia concursibus illic caestibus pariter
-somnus, fortius ante ille. Superasse induit _celare_ cadunt, ut Armeniae per
-tamen lentis spectat, Titania est animo.
+如果你想与我联系，欢迎通过联系页面或者发邮件([Send me an email](mailto:LianminChen@outlook.com))与我取得联系。我很乐意听到你的声音！
