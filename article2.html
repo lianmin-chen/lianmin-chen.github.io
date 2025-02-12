@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGL技术详解 - 科幻个人空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .article-content {
+            background: rgba(23, 42, 69, 0.8);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .article-content h2 {
+            color: var(--accent-color);
+            margin: 2rem 0 1rem;
+        }
+
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .article-content code {
+            background: rgba(139, 92, 246, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+
+        .code-block {
+            background: rgba(10, 25, 47, 0.7);
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        .tags {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .tag {
+            background: rgba(139, 92, 246, 0.2);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .demo-canvas {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+            margin: 2rem 0;
+            background: rgba(10, 25, 47, 0.3);
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            flex: 1;
+            background: rgba(23, 42, 69, 0.8);
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            text-decoration: none;
+            color: var(--text-color);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-color);
+        }
+
+        .nav-link.previous {
+            text-align: left;
+        }
+
+        .nav-link.next {
+            text-align: right;
+            flex-direction: row-reverse;
+        }
+
+        .nav-arrow {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .nav-label {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-title {
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo" height="40">
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="projects.html">项目</a>
+                <a href="blog.html">博客</a>
+                <a href="about.html">自我介绍</a>
+                <a href="contact.html">联系</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="article-container">
+            <h1 class="title">WebGL技术详解</h1>
+            
+            <div class="article-meta">
+                <span>发布时间：2024-03-15</span>
+                <span>阅读时间：10分钟</span>
+                <span>作者：我</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">WebGL</span>
+                <span class="tag">3D渲染</span>
+                <span class="tag">JavaScript</span>
+            </div>
+
+            <div class="article-content">
+                <p>WebGL（Web Graphics Library）是一种JavaScript API，用于在网页浏览器中渲染交互式3D和2D图形。本文将深入探讨WebGL的核心概念和实际应用。</p>
+
+                <h2>1. WebGL基础概念</h2>
+                <p>WebGL是基于OpenGL ES 2.0的Web标准，它允许GPU加速的图形渲染。主要概念包括：</p>
+                <ul>
+                    <li>着色器程序（Shaders）</li>
+                    <li>缓冲区（Buffers）</li>
+                    <li>纹理（Textures）</li>
+                    <li>变换矩阵（Transformation Matrices）</li>
+                </ul>
+
+                <h2>2. 创建第一个WebGL程序</h2>
+                <p>以下是一个简单的WebGL程序示例：</p>
+
+                <div class="code-block">
+                    <code>
+                        const canvas = document.querySelector('#glCanvas');<br>
+                        const gl = canvas.getContext('webgl');<br><br>
+
+                        // 顶点着色器程序<br>
+                        const vsSource = `<br>
+                        &nbsp;&nbsp;attribute vec4 aVertexPosition;<br>
+                        &nbsp;&nbsp;uniform mat4 uModelViewMatrix;<br>
+                        &nbsp;&nbsp;uniform mat4 uProjectionMatrix;<br>
+                        &nbsp;&nbsp;void main() {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;<br>
+                        &nbsp;&nbsp;}<br>
+                        `;<br>
+                    </code>
+                </div>
+
+                <h2>3. 3D场景渲染</h2>
+                <p>下面是一个简单的3D场景渲染示例：</p>
+                <canvas id="demo-canvas" class="demo-canvas"></canvas>
+
+                <h2>4. 性能优化技巧</h2>
+                <p>在WebGL应用开发中，性能优化至关重要：</p>
+                <ul>
+                    <li>使用合适的数据结构和算法</li>
+                    <li>优化着色器代码</li>
+                    <li>减少状态切换</li>
+                    <li>使用批处理渲染</li>
+                </ul>
+
+                <img src="images/webgl-pipeline.jpg" alt="WebGL渲染管线">
+
+                <h2>5. 实际应用场景</h2>
+                <p>WebGL技术在多个领域有广泛应用：</p>
+                <ul>
+                    <li>Web游戏开发</li>
+                    <li>数据可视化</li>
+                    <li>3D产品展示</li>
+                    <li>虚拟现实（VR）</li>
+                    <li>建筑设计展示</li>
+                </ul>
+
+                <h2>6. 未来发展</h2>
+                <p>随着WebGL 2.0的推出和WebGPU的发展，Web 3D技术将迎来更多可能：</p>
+                <ul>
+                    <li>更高性能的图形渲染</li>
+                    <li>更丰富的着色器功能</li>
+                    <li>更好的跨平台兼容性</li>
+                    <li>与其他Web技术的深度整合</li>
+                </ul>
+            </div>
+            <!-- 在 article-content div 后添加 -->
+            <div class="article-navigation">
+                <a href="article.html" class="nav-link previous">
+                    <span class="nav-arrow">‹</span>
+                    <div class="nav-content">
+                        <div class="nav-label">上一篇</div>
+                        <div class="nav-title">人工智能在图像处理中的应用</div>
+                    </div>
+                </a>
+                <a href="article3.html" class="nav-link next">
+                    <div class="nav-content">
+                        <div class="nav-label">下一篇</div>
+                        <div class="nav-title">Web3.0与区块链技术</div>
+                    </div>
+                    <span class="nav-arrow">›</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 简单的WebGL演示代码
+        const canvas = document.getElementById('demo-canvas');
+        const gl = canvas.getContext('webgl');
+
+        if (gl) {
+            gl.clearColor(0.1, 0.2, 0.3, 1.0);
+            gl.clear(gl.COLOR_BUFFER_BIT);
+        }
+    </script>
+</body>
+</html> 
