@@ -53,6 +53,73 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
+
+        .blog-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .blog-nav-item {
+            background: rgba(23, 42, 69, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .blog-nav-item:hover {
+            transform: translateX(10px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+        }
+
+        .nav-number {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            opacity: 0.8;
+            min-width: 60px;
+        }
+
+        .nav-content {
+            flex: 1;
+        }
+
+        .nav-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .nav-meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-tags {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .blog-card {
+            scroll-margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-meta {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -63,9 +130,9 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">首页</a>
+                <a href="about.html">自我介绍</a>
                 <a href="projects.html">项目</a>
                 <a href="blog.html">博客</a>
-                <a href="about.html">自我介绍</a>
                 <a href="contact.html">联系</a>
             </div>
         </nav>
@@ -73,8 +140,57 @@
 
     <div class="container">
         <h1 class="title">技术博客</h1>
-        
-        <div class="blog-card">
+        <div class="section-divider"></div>
+
+        <!-- 博客目录 -->
+        <div class="blog-nav">
+            <div class="blog-nav-item" onclick="scrollToBlog('ai-article')">
+                <div class="nav-number">01</div>
+                <div class="nav-content">
+                    <h3>人工智能在图像处理中的应用</h3>
+                    <div class="nav-meta">
+                        <span>2024-03-20</span>
+                        <span>15分钟阅读</span>
+                    </div>
+                    <div class="nav-tags">
+                        <span class="tag">AI</span>
+                        <span class="tag">深度学习</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-nav-item" onclick="scrollToBlog('webgl-article')">
+                <div class="nav-number">02</div>
+                <div class="nav-content">
+                    <h3>WebGL技术详解</h3>
+                    <div class="nav-meta">
+                        <span>2024-03-15</span>
+                        <span>10分钟阅读</span>
+                    </div>
+                    <div class="nav-tags">
+                        <span class="tag">WebGL</span>
+                        <span class="tag">3D渲染</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-nav-item" onclick="scrollToBlog('web3-article')">
+                <div class="nav-number">03</div>
+                <div class="nav-content">
+                    <h3>Web3.0与区块链技术</h3>
+                    <div class="nav-meta">
+                        <span>2024-03-10</span>
+                        <span>12分钟阅读</span>
+                    </div>
+                    <div class="nav-tags">
+                        <span class="tag">Web3</span>
+                        <span class="tag">区块链</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div id="ai-article" class="blog-card">
             <div class="blog-meta">
                 <span>2024-03-20</span>
                 <span>阅读时间：15分钟</span>
@@ -88,10 +204,10 @@
             <p class="blog-excerpt">
                 在现代图像处理领域，深度学习技术正在发挥越来越重要的作用。本文将详细探讨如何利用卷积神经网络进行图像识别和分类...
             </p>
-            <a href="article.html" class="button">阅读全文</a>
+            <a href="blogs/article.html" class="button">阅读全文</a>
         </div>
 
-        <div class="blog-card">
+        <div id="webgl-article" class="blog-card">
             <div class="blog-meta">
                 <span>2024-03-15</span>
                 <span>阅读时间：10分钟</span>
@@ -105,10 +221,10 @@
             <p class="blog-excerpt">
                 WebGL作为浏览器中的3D渲染技术，为Web开发带来了无限可能。本文将介绍WebGL的基本原理和实际应用案例...
             </p>
-            <a href="article2.html" class="button">阅读全文</a>
+            <a href="blogs/article2.html" class="button">阅读全文</a>
         </div>
 
-        <div class="blog-card">
+        <div id="web3-article" class="blog-card">
             <div class="blog-meta">
                 <span>2024-03-10</span>
                 <span>阅读时间：12分钟</span>
@@ -122,8 +238,19 @@
             <p class="blog-excerpt">
                 Web3.0代表着互联网的下一代革命，它将通过区块链技术重新定义数据所有权和价值传输。本文将探讨Web3.0的核心概念和应用前景...
             </p>
-            <a href="article3.html" class="button">阅读全文</a>
+            <a href="blogs/article3.html" class="button">阅读全文</a>
         </div>
     </div>
+    <div class="section-divider"></div>
+    <script src="js/effects.js"></script>
+    <script>
+        function scrollToBlog(id) {
+            const element = document.getElementById(id);
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
 </body>
 </html> 

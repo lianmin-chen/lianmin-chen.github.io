@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            display: flex;
+            justify-content: center;
             padding: 2rem 0;
         }
 
         .contact-info {
+            max-width: 600px;
+            width: 100%;
             background: rgba(23, 42, 69, 0.8);
             padding: 2rem;
             border-radius: 15px;
@@ -30,8 +31,22 @@
         }
 
         .social-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .social-item {
             display: flex;
-            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .social-name {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
         }
 
         .social-link {
@@ -50,36 +65,10 @@
             transform: translateY(-3px);
         }
 
-        .contact-form {
-            background: rgba(23, 42, 69, 0.8);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--accent-color);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(10, 25, 47, 0.5);
-            border: 1px solid rgba(139, 92, 246, 0.2);
-            border-radius: 8px;
-            color: var(--text-color);
-        }
-
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
+        .social-link img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
         }
 
         @media (max-width: 768px) {
@@ -97,9 +86,9 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">首页</a>
+                <a href="about.html">自我介绍</a>
                 <a href="projects.html">项目</a>
                 <a href="blog.html">博客</a>
-                <a href="gallery.html">图库</a>
                 <a href="contact.html">联系</a>
             </div>
         </nav>
@@ -107,54 +96,51 @@
 
     <div class="container">
         <h1 class="title">联系我</h1>
-        
+        <div class="section-divider"></div>
         <div class="contact-container">
             <div class="contact-info">
                 <div class="contact-item">
                     <h3>联系方式</h3>
-                    <p>邮箱：example@email.com</p>
-                    <p>电话：+86 123 4567 8900</p>
+                    <p>邮箱：2323849131@qq.com</p>
+                    <p>QQ：2323849131</p>
                 </div>
                 <div class="contact-item">
-                    <h3>社交媒体</h3>
+                    <h3>社交媒体（点击试试）</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link">
-                            <img src="images/github.svg" alt="GitHub">
-                        </a>
-                        <a href="#" class="social-link">
-                            <img src="images/linkedin.svg" alt="LinkedIn">
-                        </a>
-                        <a href="#" class="social-link">
-                            <img src="images/twitter.svg" alt="Twitter">
-                        </a>
+                        <div class="social-item">
+                            <a href="https://github.com/charles-winit" class="social-link">
+                                <img src="images/github-mark-white.svg" alt="GitHub">
+                            </a>
+                            <span class="social-name">GitHub</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://www.zhihu.com/people/hao-yue-dang-kong-7-96" class="social-link">
+                                <img src="images/zhihu.jpg" alt="知乎">
+                            </a>
+                            <span class="social-name">知乎</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="https://space.bilibili.com/1924591052" class="social-link">
+                                <img src="images/bilibili.jpg" alt="哔哩哔哩">
+                            </a>
+                            <span class="social-name">哔哩哔哩</span>
+                        </div>
+                        <div class="social-item">
+                            <a href="wechat_info.html" class="social-link">
+                                <img src="images/wechat.png" alt="微信">
+                            </a>
+                            <span class="social-name">微信公众号</span>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-item">
                     <h3>地址</h3>
-                    <p>中国上海市浦东新区科技园区</p>
+                    <p>中国</p>
                 </div>
             </div>
-
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">姓名</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">邮箱</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">主题</label>
-                    <input type="text" id="subject" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">消息</label>
-                    <textarea id="message" required></textarea>
-                </div>
-                <button type="submit" class="button">发送消息</button>
-            </form>
         </div>
     </div>
+    <div class="section-divider"></div>
+    <script src="js/effects.js"></script>
 </body>
 </html> 

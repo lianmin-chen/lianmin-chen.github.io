@@ -45,6 +45,61 @@
             border-radius: 20px;
             font-size: 0.9rem;
         }
+
+        .project-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2rem 0;
+            padding: 1rem;
+        }
+
+        .project-nav-item {
+            flex: 1;
+            background: rgba(23, 42, 69, 0.8);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .project-nav-item:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-color);
+            box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+        }
+
+        .nav-number {
+            font-size: 2rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            opacity: 0.8;
+            min-width: 60px;
+        }
+
+        .nav-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-content p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .project-card {
+            scroll-margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .project-nav {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
@@ -55,9 +110,9 @@
             </div>
             <div class="nav-links">
                 <a href="index.html">首页</a>
+                <a href="about.html">自我介绍</a>
                 <a href="projects.html">项目</a>
                 <a href="blog.html">博客</a>
-                <a href="about.html">自我介绍</a>
                 <a href="contact.html">联系</a>
             </div>
         </nav>
@@ -65,8 +120,36 @@
 
     <div class="container">
         <h1 class="title">项目展示</h1>
-        
-        <div class="project-card">
+        <div class="section-divider"></div>
+
+        <!-- 项目目录 -->
+        <div class="project-nav">
+            <div class="project-nav-item" onclick="scrollToProject('ai-project')">
+                <div class="nav-number">01</div>
+                <div class="nav-content">
+                    <h3>AI图像识别系统</h3>
+                    <p>基于深度学习的实时识别系统</p>
+                </div>
+            </div>
+            <div class="project-nav-item" onclick="scrollToProject('vr-project')">
+                <div class="nav-number">02</div>
+                <div class="nav-content">
+                    <h3>虚拟现实展示平台</h3>
+                    <p>支持多人在线的VR交互系统</p>
+                </div>
+            </div>
+            <div class="project-nav-item" onclick="scrollToProject('blockchain-project')">
+                <div class="nav-number">03</div>
+                <div class="nav-content">
+                    <h3>区块链智能合约平台</h3>
+                    <p>去中心化金融应用平台</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div id="ai-project" class="project-card">
             <img src="images/project1.jpg" alt="项目1" class="project-image">
             <div class="project-content">
                 <h2 class="project-title">AI图像识别系统</h2>
@@ -78,11 +161,11 @@
                 <p class="project-description">
                     基于深度学习的图像识别系统，能够实时识别和分类物体，准确率达到98%。
                 </p>
-                <a href="#" class="button">查看详情</a>
+                <a href="projects/project1.html" class="button">查看详情</a>
             </div>
         </div>
 
-        <div class="project-card">
+        <div id="vr-project" class="project-card">
             <img src="images/project1.jpg" alt="项目2" class="project-image">
             <div class="project-content">
                 <h2 class="project-title">虚拟现实展示平台</h2>
@@ -94,9 +177,36 @@
                 <p class="project-description">
                     支持多人在线的VR展示平台，可用于虚拟展览和教育培训。
                 </p>
-                <a href="#" class="button">查看详情</a>
+                <a href="projects/project2.html" class="button">查看详情</a>
+            </div>
+        </div>
+
+        <div id="blockchain-project" class="project-card">
+            <img src="images/project1.jpg" alt="项目3" class="project-image">
+            <div class="project-content">
+                <h2 class="project-title">区块链智能合约平台</h2>
+                <div class="tech-stack">
+                    <span class="tech-tag">Solidity</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Web3.js</span>
+                </div>
+                <p class="project-description">
+                    去中心化金融应用平台，支持智能合约部署和交易管理。
+                </p>
+                <a href="projects/project3.html" class="button">查看详情</a>
             </div>
         </div>
     </div>
+    <div class="section-divider"></div>
+    <script src="js/effects.js"></script>
+    <script>
+        function scrollToProject(id) {
+            const element = document.getElementById(id);
+            element.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    </script>
 </body>
 </html> 

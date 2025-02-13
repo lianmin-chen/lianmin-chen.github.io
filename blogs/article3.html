@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3.0与区块链技术 - 科幻个人空间</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="blog-styles.css">
+</head>
+<body>
+    <div class="nav-container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../images/logo.png" alt="Logo" height="40">
+            </div>
+            <div class="nav-links">
+                <a href="../index.html">首页</a>
+                <a href="../about.html">自我介绍</a>
+                <a href="../projects.html">项目</a>
+                <a href="../blog.html">博客</a>
+                <a href="../contact.html">联系</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="article-container">
+            <h1 class="title">Web3.0与区块链技术</h1>
+            
+            <div class="article-meta">
+                <span>发布时间：2024-03-10</span>
+                <span>阅读时间：12分钟</span>
+                <span>作者：我</span>
+            </div>
+
+            <div class="tags">
+                <span class="tag">Web3</span>
+                <span class="tag">区块链</span>
+                <span class="tag">去中心化</span>
+            </div>
+
+            <div class="article-content">
+                <p>Web3.0代表着互联网的下一代革命，它将通过区块链技术重新定义数据所有权和价值传输。本文将探讨Web3.0的核心概念和应用前景。</p>
+
+                <h2>1. Web3.0的核心理念</h2>
+                <p>Web3.0的核心是去中心化和用户数据主权，主要特点包括：</p>
+                <ul>
+                    <li>去中心化存储和计算</li>
+                    <li>用户完全掌控数据</li>
+                    <li>通证经济模型</li>
+                    <li>智能合约自动执行</li>
+                </ul>
+
+                <h2>2. 智能合约示例</h2>
+                <div class="code-block">
+                    <code>
+                        // SPDX-License-Identifier: MIT<br>
+                        pragma solidity ^0.8.0;<br><br>
+
+                        contract SimpleStorage {<br>
+                        &nbsp;&nbsp;string private data;<br><br>
+
+                        &nbsp;&nbsp;function set(string memory _data) public {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;data = _data;<br>
+                        &nbsp;&nbsp;}<br><br>
+
+                        &nbsp;&nbsp;function get() public view returns (string memory) {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;return data;<br>
+                        &nbsp;&nbsp;}<br>
+                        }
+                    </code>
+                </div>
+
+                <h2>3. 去中心化应用架构</h2>
+                <p>现代DApp（去中心化应用）通常采用以下架构：</p>
+                <ul>
+                    <li>前端：React/Vue.js</li>
+                    <li>智能合约：Solidity</li>
+                    <li>存储：IPFS</li>
+                    <li>网络：以太坊/Polygon等</li>
+                </ul>
+
+                <img src="images/web3-architecture.jpg" alt="Web3架构图">
+
+                <h2>4. 实际应用场景</h2>
+                <p>Web3.0技术已在多个领域展现出巨大潜力：</p>
+                <ul>
+                    <li>去中心化金融（DeFi）</li>
+                    <li>非同质化代币（NFT）</li>
+                    <li>去中心化身份认证</li>
+                    <li>数据市场</li>
+                </ul>
+
+                <h2>5. 未来展望</h2>
+                <p>随着技术的不断发展，Web3.0将带来：</p>
+                <ul>
+                    <li>更高效的价值传输</li>
+                    <li>更公平的数据经济</li>
+                    <li>更安全的数字身份</li>
+                    <li>更透明的治理机制</li>
+                </ul>
+            </div>
+
+            <div class="article-navigation">
+                <a href="article2.html" class="nav-link previous">
+                    <span class="nav-arrow">‹</span>
+                    <div class="nav-content">
+                        <div class="nav-label">上一篇</div>
+                        <div class="nav-title">WebGL技术详解</div>
+                    </div>
+                </a>
+                <div style="flex: 1;"></div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/effects.js"></script>
+</body>
+</html> 

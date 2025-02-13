@@ -63,7 +63,7 @@ body {
 
 .container {
     max-width: 1200px;
-    margin: 100px auto 0;
+    margin: 40px auto 0;
     padding: 0 2rem;
 }
 
@@ -93,12 +93,35 @@ body {
 }
 
 .title {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #8b5cf6, #3b82f6);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 3rem;
+    color: var(--accent-color);
+    margin: 2rem 0;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 0 0 10px rgba(139, 92, 246, 0.3);
+    transition: all 0.3s ease;
+}
+
+.title:hover {
+    text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+    transform: translateX(-50%) scale(1.05);
+}
+
+.title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    margin-top: 0.5rem;
+    transition: width 0.5s ease;
+}
+
+.title:hover::after {
+    width: 100%;
 }
 
 .subtitle {
@@ -114,16 +137,35 @@ body {
 }
 
 .card {
-    background: rgba(23, 42, 69, 0.8);
-    border-radius: 15px;
     padding: 2rem;
+    border-radius: 10px;
+    background: var(--card-bg);
     transition: transform 0.3s ease;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    box-shadow: 
+        0 4px 6px rgba(0, 0, 0, 0.1),
+        inset 0 0 8px rgba(139, 92, 246, 0.05);
 }
 
 .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
+    border-color: rgba(139, 92, 246, 0.5);
+    box-shadow: 
+        0 6px 12px rgba(0, 0, 0, 0.12),
+        inset 0 0 10px rgba(139, 92, 246, 0.1);
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+.card p {
+    margin-bottom: 1.5rem;
 }
 
 .button {
@@ -139,4 +181,56 @@ body {
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* 磁性效果 */
+.magnetic {
+    transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* 点击波纹效果 */
+.ripple {
+    position: fixed;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.5);
+    transform: scale(0);
+    animation: ripple-effect 1s cubic-bezier(0, 0, 0.2, 1);
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    margin-left: -50px;
+    margin-top: -50px;
+}
+
+@keyframes ripple-effect {
+    to {
+        transform: scale(6);
+        opacity: 0;
+    }
+}
+
+/* 分隔线样式 */
+.section-divider {
+    width: 80%;
+    margin: 1rem auto;
+    position: relative;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent,
+        var(--accent-color) 20%,
+        var(--accent-color) 80%,
+        transparent
+    );
+}
+
+.section-divider::before {
+    content: '✧';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg-color);
+    padding: 0 20px;
+    color: var(--accent-color);
+    font-size: 1.5rem;
 } 
