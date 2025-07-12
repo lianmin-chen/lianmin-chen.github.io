@@ -13,6 +13,7 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
+  padding-bottom: 60px;
 }
 
 body::before {
