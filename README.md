@@ -54,6 +54,54 @@
 { id: "life-single-2", title: "生活笔记", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
 ```
 
+## 📚 添加论文/项目
+
+论文与项目展示在 academic.html 中，采用卡片式布局。只需在对应列表中复制一条模板并填充信息。
+
+### 论文条目模板
+
+```html
+<article class="paper-card">
+	<div class="paper-header">
+		<span class="paper-label">arXiv · cs.AI</span>
+		<span class="paper-date">2025-12-10</span>
+	</div>
+	<h5 class="paper-title">论文标题</h5>
+	<p class="paper-authors">作者1, 作者2, 作者3</p>
+	<div class="paper-meta">
+		<span class="meta-pill">关键词1</span>
+		<span class="meta-pill">关键词2</span>
+		<span class="meta-pill">arXiv:xxxx.xxxxx</span>
+	</div>
+	<div class="paper-actions">
+		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">arXiv</a>
+		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">PDF</a>
+	</div>
+</article>
+```
+
+### 项目条目模板
+
+```html
+<article class="project-card">
+	<div class="project-header">
+		<span class="project-label">Project Type</span>
+		<span class="project-date">2025</span>
+	</div>
+	<h5 class="project-title">项目名称</h5>
+	<p class="project-authors">团队/角色说明</p>
+	<div class="project-meta">
+		<span class="meta-pill">标签1</span>
+		<span class="meta-pill">标签2</span>
+		<span class="meta-pill">状态或技术栈</span>
+	</div>
+	<div class="project-actions">
+		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">项目页</a>
+		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">文档</a>
+	</div>
+</article>
+```
+
 ## 🖥️ 本地预览
 
 Markdown 文件需要通过本地服务器加载, 不要使用 file:// 直接打开 HTML。
@@ -124,6 +172,54 @@ Example (life article):
 
 ```js
 { id: "life-single-2", title: "Life Note", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
+```
+
+## 📚 Add Papers/Projects
+
+The academic section is rendered in academic.html using card entries. Copy a template into the correct list and fill in the metadata.
+
+### Paper entry template
+
+```html
+<article class="paper-card">
+	<div class="paper-header">
+		<span class="paper-label">arXiv · cs.AI</span>
+		<span class="paper-date">2025-12-10</span>
+	</div>
+	<h5 class="paper-title">Paper Title</h5>
+	<p class="paper-authors">Author 1, Author 2, Author 3</p>
+	<div class="paper-meta">
+		<span class="meta-pill">Keyword 1</span>
+		<span class="meta-pill">Keyword 2</span>
+		<span class="meta-pill">arXiv:xxxx.xxxxx</span>
+	</div>
+	<div class="paper-actions">
+		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">arXiv</a>
+		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">PDF</a>
+	</div>
+</article>
+```
+
+### Project entry template
+
+```html
+<article class="project-card">
+	<div class="project-header">
+		<span class="project-label">Project Type</span>
+		<span class="project-date">2025</span>
+	</div>
+	<h5 class="project-title">Project Name</h5>
+	<p class="project-authors">Team or role</p>
+	<div class="project-meta">
+		<span class="meta-pill">Tag 1</span>
+		<span class="meta-pill">Tag 2</span>
+		<span class="meta-pill">Status or stack</span>
+	</div>
+	<div class="project-actions">
+		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">Project</a>
+		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">Docs</a>
+	</div>
+</article>
 ```
 
 ## 🖥️ Local Preview

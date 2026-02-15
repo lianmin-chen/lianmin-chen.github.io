@@ -53,32 +53,104 @@
           </div>
           <div class="panel reveal delay-1">
             <h4 data-i18n="academic.paper.title">论文列表</h4>
-            <div class="entry-list">
-              <div class="entry-item">
-                <div class="entry-main">结构化推理框架：从假设到系统</div>
-                <div class="entry-meta">2025</div>
-                <a class="entry-link" href="https://example.com/paper-1" target="_blank" rel="noopener">链接</a>
-              </div>
-              <div class="entry-item">
-                <div class="entry-main">认知结构的可扩展性研究</div>
-                <div class="entry-meta">2024</div>
-                <a class="entry-link" href="https://example.com/paper-2" target="_blank" rel="noopener">链接</a>
-              </div>
+            <div class="entry-list paper-list">
+              <article class="paper-card">
+                <div class="paper-header">
+                  <span class="paper-label">NeurIPS workshop UrbanAI 2025</span>
+                  <span class="paper-date">2025-12-10</span>
+                </div>
+                <h5 class="paper-title">HeLoFusion: An Efficient and Scalable Encoder for Modeling Heterogeneous and Multi-Scale Interactions in Trajectory Prediction</h5>
+                <p class="paper-authors">Bingqing Wei, Lianmin Chen, Zhongyu Xia, Yongtao Wang</p>
+                <div class="paper-meta">
+                  <span class="meta-pill">Trajectory Prediction</span>
+                  <span class="meta-pill">Multi-agent Interaction</span>
+                  <span class="meta-pill">arXiv:2509.11719</span>
+                </div>
+                <div class="paper-actions">
+                  <a class="paper-link" href="https://arxiv.org/abs/2509.11719" target="_blank" rel="noopener">arXiv</a>
+                  <a class="paper-link" href="https://arxiv.org/pdf/2509.11719" target="_blank" rel="noopener">PDF</a>
+                </div>
+              </article>
             </div>
           </div>
           <div class="panel reveal delay-2">
             <h4 data-i18n="academic.project.title">项目列表</h4>
-            <div class="entry-list">
-              <div class="entry-item">
-                <div class="entry-main">推理路径可视化工具</div>
-                <div class="entry-meta">2025</div>
-                <a class="entry-link" href="https://example.com/project-1" target="_blank" rel="noopener">链接</a>
-              </div>
-              <div class="entry-item">
-                <div class="entry-main">知识结构化的写作流程</div>
-                <div class="entry-meta">2024</div>
-                <a class="entry-link" href="https://example.com/project-2" target="_blank" rel="noopener">链接</a>
-              </div>
+            <div class="entry-list project-list">
+              <article class="project-card">
+                <div class="project-header">
+                  <span class="project-label">Research Tool</span>
+                  <span class="project-date">2025</span>
+                </div>
+                <h5 class="project-title">推理路径可视化工具</h5>
+                <p class="project-authors">个人研究原型</p>
+                <div class="project-meta">
+                  <span class="meta-pill">Visualization</span>
+                  <span class="meta-pill">Reasoning</span>
+                  <span class="meta-pill">Prototype</span>
+                </div>
+                <div class="project-actions">
+                  <a class="project-link" href="https://example.com/project-1" target="_blank" rel="noopener">项目页</a>
+                  <a class="project-link" href="https://example.com/project-1-demo" target="_blank" rel="noopener">演示</a>
+                </div>
+              </article>
+              <article class="project-card">
+                <div class="project-header">
+                  <span class="project-label">Writing System</span>
+                  <span class="project-date">2024</span>
+                </div>
+                <h5 class="project-title">知识结构化的写作流程</h5>
+                <p class="project-authors">方法论与流程设计</p>
+                <div class="project-meta">
+                  <span class="meta-pill">Knowledge Structuring</span>
+                  <span class="meta-pill">Workflow</span>
+                  <span class="meta-pill">Documentation</span>
+                </div>
+                <div class="project-actions">
+                  <a class="project-link" href="https://example.com/project-2" target="_blank" rel="noopener">项目页</a>
+                  <a class="project-link" href="https://example.com/project-2-docs" target="_blank" rel="noopener">文档</a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="panel reveal delay-3">
+            <h4 data-i18n="academic.links.title">学术入口</h4>
+            <div class="card-grid">
+              <a class="card link-card" href="https://scholar.google.com" target="_blank" rel="noopener">
+                <div class="link-card-title">
+                  <span class="link-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <path d="M4 9l8-5 8 5-8 5-8-5z" fill="currentColor" opacity="0.9" />
+                      <path d="M6 12v3c0 1.7 3.6 3 6 3s6-1.3 6-3v-3" fill="none" stroke="currentColor" stroke-width="1.6" />
+                    </svg>
+                  </span>
+                  <h5 class="card-title">Google Scholar</h5>
+                </div>
+                <p class="desc" data-i18n="academic.links.scholar">论文引用与研究概览</p>
+              </a>
+              <a class="card link-card" href="https://dblp.org" target="_blank" rel="noopener">
+                <div class="link-card-title">
+                  <span class="link-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <path d="M6 4h12v16H6z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                      <path d="M8 7h8M8 11h8M8 15h6" fill="none" stroke="currentColor" stroke-width="1.6" />
+                    </svg>
+                  </span>
+                  <h5 class="card-title">DBLP</h5>
+                </div>
+                <p class="desc" data-i18n="academic.links.dblp">计算机领域文献索引</p>
+              </a>
+              <a class="card link-card" href="https://openreview.net" target="_blank" rel="noopener">
+                <div class="link-card-title">
+                  <span class="link-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img" focusable="false">
+                      <path d="M5 6h14v9H9l-4 4V6z" fill="none" stroke="currentColor" stroke-width="1.6" />
+                      <path d="M8 10h8" fill="none" stroke="currentColor" stroke-width="1.6" />
+                    </svg>
+                  </span>
+                  <h5 class="card-title">OpenReview</h5>
+                </div>
+                <p class="desc" data-i18n="academic.links.openreview">评审与学术讨论平台</p>
+              </a>
             </div>
           </div>
         </div>
@@ -86,7 +158,10 @@
     </main>
 
     <footer class="site-footer container">
-      <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
+      <div>
+        <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
+        <p class="footer-copyright" data-i18n="footer.copyright">本站内容与设计未经允许，不得以任何形式转载或用于商业目的。</p>
+      </div>
     </footer>
   </div>
 
