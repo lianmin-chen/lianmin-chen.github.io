@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>元衍极 | 联系方式</title>
+  <meta name="description" content="元衍极：开放而克制的连接方式。" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header container">
+      <div class="brand">
+        <a class="logo" href="index.html" aria-label="元衍极">
+          <img src="assets/images/logo.svg" alt="元衍极" />
+        </a>
+        <div class="brand-text">
+          <h1 data-i18n="brand.name">元衍极</h1>
+          <p class="tagline" data-i18n="brand.tagline">始于一元，衍至无极</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="about.html" data-i18n="nav.about">关于我</a>
+        <a href="blog.html" data-i18n="nav.blog">博客文章</a>
+        <a href="academic.html" data-i18n="nav.academic">学术</a>
+        <a href="life.html" data-i18n="nav.life">生活</a>
+        <a href="contact.html" class="active" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="header-actions">
+        <button class="toggle" id="theme-toggle" aria-label="Toggle theme">日</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="zh" class="active">中</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="hero hero--compact">
+        <div class="hero-content reveal">
+          <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+          <h2 data-i18n="contact.title">开放而克制的连接方式</h2>
+          <p class="lead" data-i18n="contact.subtitle">如果你对我的文章或思考方式有共鸣，欢迎联系我。</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="panel reveal">
+          <div class="contact-list">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <a class="contact-link" href="mailto:LianminChen@outlook.com">
+                <span data-i18n="contact.email">LianminChen@outlook.com</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <strong>GitHub</strong>
+              <a class="contact-link" href="https://github.com/lianmin-chen" target="_blank" rel="noopener">
+                <span data-i18n="contact.github">https://github.com/lianmin-chen</span>
+              </a>
+            </div>
+            <div class="contact-item">
+              <strong>Media</strong>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.zhihu.com/people/hao-yue-dang-kong-7-96" target="_blank" rel="noopener">
+                  <span data-i18n="contact.media.wechat">知乎</span>
+                </a>
+                <span class="contact-sep">/</span>
+                <a class="contact-link" href="https://space.bilibili.com/1924591052" target="_blank" rel="noopener">
+                  <span data-i18n="contact.media.bilibili">哔哩哔哩</span>
+                </a>
+                <span class="contact-sep">/</span>
+                <button class="contact-link contact-toggle" type="button" data-toggle-target="contact-wechat" aria-expanded="false">
+                  <span data-i18n="contact.media.linkedin">微信公众号</span>
+                </button>
+                <img id="contact-wechat" class="contact-inline-image" src="assets/images/wechat.png" alt="WeChat QR" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

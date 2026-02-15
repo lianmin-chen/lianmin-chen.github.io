@@ -1,0 +1,251 @@
+/* Article Page Styles */
+.article-page {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--blue-500);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.back-link:hover {
+  color: var(--text);
+  transform: translateX(-4px);
+}
+
+.article-header {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 24px;
+}
+
+.article-header h1 {
+  font-size: 2rem;
+  margin: 16px 0;
+  line-height: 1.3;
+}
+
+.article-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
+.article-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.article-meta span::before {
+  content: "📅";
+  margin-right: 6px;
+}
+
+.article-meta span:nth-child(2)::before {
+  content: "🏷️";
+}
+
+/* Markdown Content Styles */
+.article-content {
+  line-height: 1.8;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.article-content h1,
+.article-content h2,
+.article-content h3,
+.article-content h4,
+.article-content h5,
+.article-content h6 {
+  font-family: "Songti SC", "STSong", serif;
+  margin: 24px 0 12px 0;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.article-content h1 {
+  font-size: 1.8rem;
+  margin-top: 32px;
+}
+
+.article-content h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.article-content h3 {
+  font-size: 1.3rem;
+  color: var(--blue-500);
+}
+
+.article-content h4 {
+  font-size: 1.1rem;
+}
+
+.article-content p {
+  margin: 14px 0;
+  text-align: justify;
+}
+
+.article-content ul,
+.article-content ol {
+  margin: 16px 0;
+  padding-left: 24px;
+}
+
+.article-content li {
+  margin: 8px 0;
+  line-height: 1.8;
+}
+
+.article-content blockquote {
+  margin: 20px 0;
+  padding: 12px 16px;
+  border-left: 4px solid var(--blue-500);
+  background: rgba(43, 108, 183, 0.08);
+  border-radius: 4px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.article-content code {
+  background: rgba(43, 108, 183, 0.1);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-family: "Consolas", "SFMono-Regular", monospace;
+  font-size: 0.9em;
+  color: var(--text);
+}
+
+.article-content pre {
+  background: rgba(43, 108, 183, 0.08);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+.article-content pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--text);
+}
+
+.article-content a {
+  color: var(--blue-500);
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.article-content a:hover {
+  color: var(--red-500);
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  margin: 20px 0;
+  border: 1px solid var(--border);
+}
+
+.article-content hr {
+  margin: 32px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.article-content table th,
+.article-content table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.article-content table th {
+  background: rgba(43, 108, 183, 0.1);
+  font-weight: 600;
+}
+
+.article-content table tr:hover {
+  background: rgba(43, 108, 183, 0.05);
+}
+
+/* Loading and Error States */
+.article-loading {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-muted);
+}
+
+.article-error {
+  background: rgba(196, 54, 54, 0.1);
+  border: 1px solid var(--red-500);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  color: var(--red-500);
+  text-align: center;
+}
+
+/* KaTeX Math Formula Styles */
+.katex-block {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  overflow-x: auto;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-display {
+  text-align: center;
+}
+
+/* Ensure inline math doesn't break layout */
+.article-content .katex {
+  margin: 0 2px;
+}
+
+@media (max-width: 680px) {
+  .article-page {
+    padding: 0 12px;
+  }
+
+  .article-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .article-content {
+    font-size: 0.95rem;
+  }
+
+  .article-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .article-content h2 {
+    font-size: 1.2rem;
+  }
+}

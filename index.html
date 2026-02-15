@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>元衍极 | 首页</title>
+  <meta name="description" content="元衍极：以思维结构为核心资产的个人网站。" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="site-header container">
+      <div class="brand">
+        <a class="logo" href="index.html" aria-label="元衍极">
+          <img src="assets/images/logo.svg" alt="元衍极" />
+        </a>
+        <div class="brand-text">
+          <h1 data-i18n="brand.name">元衍极</h1>
+          <p class="tagline" data-i18n="brand.tagline">始于一元，衍至无极</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="active" data-i18n="nav.home">首页</a>
+        <a href="about.html" data-i18n="nav.about">关于我</a>
+        <a href="blog.html" data-i18n="nav.blog">博客文章</a>
+        <a href="academic.html" data-i18n="nav.academic">学术</a>
+        <a href="life.html" data-i18n="nav.life">生活</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="header-actions">
+        <button class="toggle" id="theme-toggle" aria-label="Toggle theme">日</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="zh" class="active">中</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main container">
+      <section class="hero" id="home">
+        <div class="hero-content reveal">
+          <h2 data-i18n="index.title">多少事，从来急；<br>天地转，光阴迫。<br>一万年太久，只争朝夕！</h2>
+          <p class="lead" data-i18n="index.subtitle">元衍极 · 始于一元，衍至无极</p>
+        </div>
+        <div class="hero-figure reveal delay-1">
+          <img id="figure-img" class="figure-img" alt="人物形象" />
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <p class="section-eyebrow" data-i18n="index.map.eyebrow">Sections</p>
+          <h3 data-i18n="index.map.title">栏目入口</h3>
+        </div>
+        <div class="card-grid">
+          <a class="card" href="about.html">
+            <div class="card-title" data-i18n="index.map.about">关于我</div>
+            <p class="desc" data-i18n="index.map.aboutDesc">一个学生</p>
+          </a>
+          <a class="card" href="blog.html">
+            <div class="card-title" data-i18n="index.map.blog">博客文章</div>
+            <p class="desc" data-i18n="index.map.blogDesc">不断积累~</p>
+          </a>
+          <a class="card" href="academic.html">
+            <div class="card-title" data-i18n="index.map.academic">学术</div>
+            <p class="desc" data-i18n="index.map.academicDesc">可被严肃引用的输出。</p>
+          </a>
+          <a class="card" href="life.html">
+            <div class="card-title" data-i18n="index.map.life">生活</div>
+            <p class="desc" data-i18n="index.map.lifeDesc">低频、真实、克制的个人侧面。</p>
+          </a>
+          <a class="card" href="contact.html">
+            <div class="card-title" data-i18n="index.map.contact">联系方式</div>
+            <p class="desc" data-i18n="index.map.contactDesc">开放而克制的连接方式。</p>
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer container">
+      <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

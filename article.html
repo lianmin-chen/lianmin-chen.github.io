@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>元衍极 | 文章</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/article.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header container">
+      <div class="brand">
+        <a class="logo" href="index.html" aria-label="元衍极">
+          <img src="assets/images/logo.svg" alt="元衍极" />
+        </a>
+        <div class="brand-text">
+          <h1 data-i18n="brand.name">元衍极</h1>
+          <p class="tagline" data-i18n="brand.tagline">始于一元，衍至无极</p>
+        </div>
+      </div>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" data-i18n="nav.home">首页</a>
+        <a href="about.html" data-i18n="nav.about">关于我</a>
+        <a href="blog.html" class="active" data-i18n="nav.blog">博客文章</a>
+        <a href="academic.html" data-i18n="nav.academic">学术</a>
+        <a href="life.html" data-i18n="nav.life">生活</a>
+        <a href="contact.html" data-i18n="nav.contact">联系方式</a>
+      </nav>
+      <div class="header-actions">
+        <button class="toggle" id="theme-toggle" aria-label="Toggle theme">日</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button data-lang="zh" class="active">中</button>
+          <button data-lang="en">EN</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main container">
+      <article class="article-page">
+        <div class="article-header">
+          <a href="blog.html" class="back-link" id="article-back">← 返回博客</a>
+          <h1 id="article-title">加载中...</h1>
+          <div class="article-meta">
+            <span id="article-date">--</span>
+            <span id="article-category">--</span>
+          </div>
+        </div>
+        <div id="article-content" class="article-content">
+          <p>加载中...</p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/article.js"></script>
+</body>
+</html>
