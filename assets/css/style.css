@@ -964,6 +964,20 @@ button.contact-link {
   margin: 8px 0;
 }
 
+.site-stats {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.site-stats span {
+  white-space: nowrap;
+}
+
 .footer-copyright {
   font-size: 0.82rem;
   color: var(--text-muted);

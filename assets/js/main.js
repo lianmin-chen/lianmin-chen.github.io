@@ -657,6 +657,17 @@ function initLifePage() {
   renderLifeContent("", "latest");
 }
 
+function initSiteStats() {
+  const stats = document.querySelector(".site-stats");
+  if (!stats) return;
+  const host = window.location.hostname;
+  const protocol = window.location.protocol;
+  const isLocal = protocol === "file:" || host === "localhost" || host === "127.0.0.1" || host === "[::1]";
+  if (isLocal) {
+    stats.style.display = "none";
+  }
+}
+
 function initContactMediaToggles() {
   const toggles = document.querySelectorAll("[data-toggle-target]");
   if (!toggles.length) return;
@@ -675,9 +686,11 @@ function initContactMediaToggles() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initBlogPage);
   document.addEventListener("DOMContentLoaded", initLifePage);
+  document.addEventListener("DOMContentLoaded", initSiteStats);
   document.addEventListener("DOMContentLoaded", initContactMediaToggles);
 } else {
   initBlogPage();
   initLifePage();
+  initSiteStats();
   initContactMediaToggles();
 }
