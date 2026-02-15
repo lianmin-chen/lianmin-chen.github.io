@@ -112,6 +112,102 @@ function processBlockMathInDOM(container) {
   });
 }
 
+function slugifyHeading(text) {
+  const base = text
+    .toLowerCase()
+    .trim()
+    .replace(/[\s]+/g, "-")
+    .replace(/[^\w\u4e00-\u9fa5-]/g, "");
+  return base || "section";
+}
+
+function buildArticleToc(container) {
+  const tocEl = document.getElementById("toc");
+  const tocMobileEl = document.getElementById("toc-mobile");
+  const tocPanel = document.querySelector(".toc-panel");
+  const tocMobile = document.querySelector(".toc-mobile");
+  if (!tocEl || !tocMobileEl) return;
+
+  const headings = Array.from(container.querySelectorAll("h1, h2, h3, h4, h5, h6"));
+  if (!headings.length) {
+    const emptyText = document.documentElement.lang === "en" ? "No headings" : "暂无目录";
+    tocEl.innerHTML = `<p class="toc-empty">${emptyText}</p>`;
+    tocMobileEl.innerHTML = `<p class="toc-empty">${emptyText}</p>`;
+    if (tocPanel) tocPanel.style.display = "";
+    if (tocMobile) tocMobile.style.display = "";
+    return;
+  }
+
+  const usedSlugs = new Set();
+  const list = document.createElement("ul");
+  list.className = "toc-list";
+
+  headings.forEach((heading) => {
+    const text = heading.textContent.trim();
+    if (!text) return;
+    const level = Number(heading.tagName.replace("H", ""));
+    let slug = heading.id || slugifyHeading(text);
+    let uniqueSlug = slug;
+    let index = 1;
+    while (usedSlugs.has(uniqueSlug)) {
+      uniqueSlug = `${slug}-${index}`;
+      index += 1;
+    }
+    usedSlugs.add(uniqueSlug);
+    heading.id = uniqueSlug;
+
+    const item = document.createElement("li");
+    item.className = `toc-item level-${level}`;
+    const link = document.createElement("a");
+    link.className = "toc-link";
+    link.href = `#${uniqueSlug}`;
+    link.textContent = text;
+    link.dataset.tocTarget = uniqueSlug;
+    item.appendChild(link);
+    list.appendChild(item);
+  });
+
+  tocEl.innerHTML = "";
+  tocMobileEl.innerHTML = "";
+  tocEl.appendChild(list.cloneNode(true));
+  tocMobileEl.appendChild(list.cloneNode(true));
+
+  const tocLinks = document.querySelectorAll(".toc-link");
+  const setActive = (id) => {
+    tocLinks.forEach((link) => {
+      link.classList.toggle("active", link.dataset.tocTarget === id);
+    });
+  };
+
+  tocLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetId = link.dataset.tocTarget;
+      const target = targetId ? document.getElementById(targetId) : null;
+      if (!target) return;
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", `#${targetId}`);
+      setActive(targetId);
+    });
+  });
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -70% 0px", threshold: 0.1 }
+  );
+
+  headings.forEach((heading) => observer.observe(heading));
+  if (headings[0]) {
+    setActive(headings[0].id);
+  }
+}
+
 // Get article path from URL parameter
 function getArticlePathFromUrl() {
   const params = new URLSearchParams(window.location.search);
@@ -178,6 +274,7 @@ async function displayArticle() {
     
     // Process block math formulas in the DOM
     processBlockMathInDOM(contentEl);
+    buildArticleToc(contentEl);
     
     // Extract date from URL or markdown
     const dateMatch = markdown.match(/\*更新于\s+(.+)\*/);

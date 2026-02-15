@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 文章</title>
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/article.css" />
+  <link rel="stylesheet" href="assets/css/article.css?v=20260215k" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
@@ -41,19 +41,29 @@
     </header>
 
     <main class="main container">
-      <article class="article-page">
-        <div class="article-header">
-          <a href="blog.html" class="back-link" id="article-back">← 返回博客</a>
-          <h1 id="article-title">加载中...</h1>
-          <div class="article-meta">
-            <span id="article-date">--</span>
-            <span id="article-category">--</span>
+      <div class="article-layout">
+        <article class="article-page">
+          <div class="article-header">
+            <a href="blog.html" class="back-link" id="article-back">← 返回博客</a>
+            <h1 id="article-title">加载中...</h1>
+            <div class="article-meta">
+              <span id="article-date">--</span>
+              <span id="article-category">--</span>
+            </div>
           </div>
-        </div>
-        <div id="article-content" class="article-content">
-          <p>加载中...</p>
-        </div>
-      </article>
+          <details class="toc-mobile" open>
+            <summary data-i18n="article.toc">目录</summary>
+            <nav id="toc-mobile" class="toc-nav" aria-label="Table of contents"></nav>
+          </details>
+          <div id="article-content" class="article-content">
+            <p>加载中...</p>
+          </div>
+        </article>
+        <aside class="toc-panel" aria-label="Table of contents">
+          <h4 class="toc-title" data-i18n="article.toc">目录</h4>
+          <nav id="toc" class="toc-nav"></nav>
+        </aside>
+      </div>
     </main>
 
     <footer class="site-footer container">
@@ -65,6 +75,6 @@
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/article.js"></script>
+  <script src="assets/js/article.js?v=20260215"></script>
 </body>
 </html>

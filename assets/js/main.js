@@ -129,7 +129,8 @@ const translations = {
     "contact.media.wechat.title": "微信公众号",
     "contact.media.wechat.desc": "简短更新与系列文章会优先发布在公众号。",
 
-    "footer.copyright": "本站内容与设计未经允许，不得以任何形式转载或用于商业目的。"
+    "footer.copyright": "本站内容与设计未经允许，不得以任何形式转载或用于商业目的。",
+    "article.toc": "目录"
   },
   en: {
       "brand.name": "OriginX",
@@ -257,7 +258,8 @@ const translations = {
     "contact.media.wechat.title": "WeChat Official Account",
     "contact.media.wechat.desc": "Short updates and series posts appear here first.",
 
-    "footer.copyright": "Content and design of this site must not be reproduced or used for commercial purposes without permission."
+    "footer.copyright": "Content and design of this site must not be reproduced or used for commercial purposes without permission.",
+    "article.toc": "Table of contents"
   }
 };
 
@@ -356,6 +358,7 @@ const blogData = {
     }
   ],
   articles: [
+    { id: "single-toc", title: "目录测试文章", date: "2026-02-15", category: "Test", path: "blog/articles/toc-test.md" },
     { id: "single-test", title: "Markdown 语法测试文章", date: "2026-02-15", category: "Test", path: "blog/articles/test.md" },
     { id: "single-1", title: "机器学习最新进展", date: "2026-02-11", category: "ML", path: "./blog/articles/single-1.md" },
     { id: "single-2", title: "大模型微调最佳实践", date: "2026-02-08", category: "LLM", path: "blog/articles/single-2.md" },
