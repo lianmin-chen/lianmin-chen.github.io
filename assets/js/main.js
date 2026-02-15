@@ -127,7 +127,7 @@ const translations = {
     "contact.media.bilibili.desc": "公开视频、概念拆解与实验演示会同步在这里。",
     "contact.media.bilibili.link": "打开哔哩哔哩主页",
     "contact.media.wechat.title": "微信公众号",
-    "contact.media.wechat.desc": "简短更新与系列文章会优先发布在公众号。",
+    "contact.media.wechat.desc": "简短更新与系列文章发布。",
 
     "footer.copyright": "本站内容与设计未经允许，不得以任何形式转载或用于商业目的。",
     "article.toc": "目录"
@@ -256,7 +256,7 @@ const translations = {
     "contact.media.bilibili.desc": "Public videos, concept breakdowns, and demos are synced here.",
     "contact.media.bilibili.link": "Open Bilibili channel",
     "contact.media.wechat.title": "WeChat Official Account",
-    "contact.media.wechat.desc": "Short updates and series posts appear here first.",
+    "contact.media.wechat.desc": "Short updates and series posts appear here.",
 
     "footer.copyright": "Content and design of this site must not be reproduced or used for commercial purposes without permission.",
     "article.toc": "Table of contents"
