@@ -2,6 +2,12 @@
 .article-page {
   max-width: 800px;
   margin: 0 auto;
+  padding: 28px 26px 30px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
 }
 
 .back-link {

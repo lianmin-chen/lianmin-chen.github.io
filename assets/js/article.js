@@ -5,7 +5,7 @@
 function configureMarked() {
   // Configure marked options
   marked.setOptions({
-    breaks: true,
+    breaks: false,
     gfm: true
   });
 
@@ -35,19 +35,19 @@ function configureMarked() {
   const originalParagraph = renderer.paragraph ? renderer.paragraph.bind(renderer) : (text) => `<p>${text}</p>`;
   
   renderer.paragraph = function(text) {
-    // Handle block math: $$...$$
-    if (text.includes('$$')) {
-      text = text.replace(/\$\$([\s\S]*?)\$\$/g, (match, formula) => {
-        try {
-          return `<div class="katex-block">${katex.renderToString(formula, { 
-            throwOnError: false,
-            output: 'html'
-          })}</div>`;
-        } catch (e) {
-          return match;
-        }
-      });
-      return text;
+    // Check if paragraph is ONLY a block math formula (with optional whitespace)
+    const blockMathMatch = text.match(/^\s*\$\$([\s\S]*?)\$\$\s*$/);
+    if (blockMathMatch) {
+      const formula = blockMathMatch[1].trim();
+      try {
+        const rendered = katex.renderToString(formula, { 
+          throwOnError: false,
+          output: 'html'
+        });
+        return `<div class="katex-block">${rendered}</div>`;
+      } catch (e) {
+        return originalParagraph(text);
+      }
     }
     return originalParagraph(text);
   };
@@ -79,6 +79,37 @@ function parseMarkdownTitle(markdown) {
 
 function renderMarkdownToHtml(markdown) {
   return marked.parse(markdown);
+}
+
+function processBlockMathInDOM(container) {
+  // Find all paragraphs and check for block math
+  const paragraphs = container.querySelectorAll('p');
+  
+  paragraphs.forEach(p => {
+    const text = p.innerHTML;
+    
+    // Check if paragraph contains block math: $$...$$
+    const blockMathRegex = /\$\$([\s\S]*?)\$\$/g;
+    let match;
+    let hasBlockMath = false;
+    
+    while ((match = blockMathRegex.exec(text)) !== null) {
+      hasBlockMath = true;
+      const formula = match[1];
+      try {
+        const rendered = katex.renderToString(formula, { 
+          throwOnError: false,
+          output: 'html'
+        });
+        
+        // Replace only the formula part, keeping surrounding text
+        const replacement = `<div class="katex-block">${rendered}</div>`;
+        p.innerHTML = p.innerHTML.replace(match[0], replacement);
+      } catch (e) {
+        console.error('Failed to render math:', e);
+      }
+    }
+  });
 }
 
 // Get article path from URL parameter
@@ -144,6 +175,9 @@ async function displayArticle() {
     
     titleEl.textContent = title;
     contentEl.innerHTML = cleanHtml;
+    
+    // Process block math formulas in the DOM
+    processBlockMathInDOM(contentEl);
     
     // Extract date from URL or markdown
     const dateMatch = markdown.match(/\*更新于\s+(.+)\*/);
