@@ -126,6 +126,10 @@ const translations = {
     "contact.media.bilibili.title": "视频讲解",
     "contact.media.bilibili.desc": "公开视频、概念拆解与实验演示会同步在这里。",
     "contact.media.bilibili.link": "打开哔哩哔哩主页",
+    "contact.media.xiaohongshu": "小红书",
+    "contact.media.xiaohongshu.title": "笔记更新",
+    "contact.media.xiaohongshu.desc": "轻量分享、灵感记录与日常观察会发布在这里。",
+    "contact.media.xiaohongshu.link": "打开小红书主页",
     "contact.media.wechat.title": "微信公众号",
     "contact.media.wechat.desc": "简短更新与系列文章发布。",
 
@@ -255,6 +259,10 @@ const translations = {
     "contact.media.bilibili.title": "Video explainers",
     "contact.media.bilibili.desc": "Public videos, concept breakdowns, and demos are synced here.",
     "contact.media.bilibili.link": "Open Bilibili channel",
+    "contact.media.xiaohongshu": "Xiaohongshu",
+    "contact.media.xiaohongshu.title": "Notes",
+    "contact.media.xiaohongshu.desc": "Lightweight notes, inspirations, and daily observations appear here.",
+    "contact.media.xiaohongshu.link": "Open Xiaohongshu profile",
     "contact.media.wechat.title": "WeChat Official Account",
     "contact.media.wechat.desc": "Short updates and series posts appear here.",
 
