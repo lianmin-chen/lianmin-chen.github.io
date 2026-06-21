@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 关于我</title>
-  <meta name="description" content="元衍极：思维路径与成长轨迹。" />
+  <meta name="description" content="关于 Lianmin Chen：研究兴趣、学习经历与个人成长轨迹。" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="about-page">
   <div class="page">
     <header class="site-header container">
       <div class="brand">
@@ -36,59 +37,149 @@
       </div>
     </header>
 
-    <main class="main container">
-      <section class="hero hero--compact about-hero">
-        <div class="hero-figure reveal">
-          <div class="avatar-frame">
-            <img class="avatar-img" src="assets/images/avatar.png" alt="头像" />
+    <main class="main container about-main">
+      <section class="about-intro">
+        <div class="about-intro-copy reveal">
+          <p class="about-kicker" data-i18n="about.eyebrow">ABOUT · 个人档案</p>
+          <h2 class="about-name">Lianmin Chen</h2>
+          <p class="about-role" data-i18n="about.subtitle">
+            <span class="role-left">计算机科学 · 本科生</span>
+            <span class="role-divider">•</span>
+            <span class="role-right">学习与研究 <em>人工智能</em></span>
+          </p>
+          <p class="about-statement" data-i18n="about.statement">
+            我关注机器学习中的模型、决策与优化问题，也在持续寻找一种更清晰、更可复现的方式组织研究与表达。
+          </p>
+          <div class="about-identity">
+            <div class="about-identity-item">
+              <span class="about-identity-label" data-i18n="about.identity.school">学校</span>
+              <strong data-i18n="about.pill1">华中科技大学</strong>
+            </div>
+            <div class="about-identity-item">
+              <span class="about-identity-label" data-i18n="about.identity.major">专业</span>
+              <strong data-i18n="about.pill3">计算机科学与技术</strong>
+            </div>
+            <div class="about-identity-item">
+              <span class="about-identity-label" data-i18n="about.identity.status">身份</span>
+              <strong data-i18n="about.pill2">本科生</strong>
+            </div>
           </div>
         </div>
-        <div class="hero-content reveal delay-1">
-          <p class="eyebrow" data-i18n="about.eyebrow">我是谁？</p>
-          <h2 data-i18n="about.title">一个学生</h2>
-          <p class="lead" data-i18n="about.subtitle">学习研究人工智能中</p>
-          <div class="hero-meta">
-            <span class="pill" data-i18n="about.pill1">华中科技大学</span>
-            <span class="pill" data-i18n="about.pill2">本科生</span>
-            <span class="pill" data-i18n="about.pill3">计算机科学与技术</span>
+        <div class="about-portrait-wrap reveal delay-1">
+          <div class="about-orbit about-orbit--blue" aria-hidden="true"></div>
+          <div class="about-orbit about-orbit--red" aria-hidden="true"></div>
+          <div class="about-portrait">
+            <img src="assets/images/avatar.png" alt="Lianmin Chen 的个人角色形象" />
+            <div class="about-portrait-caption">
+              <span>STATUS</span>
+              <strong data-i18n="about.status">LEARNING · EXPLORING</strong>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="stack">
-          <div class="panel reveal">
-            <h4 data-i18n="about.profile.title">个人简介</h4>
-            <p class="desc" data-i18n="about.profile.desc">你好呀！欢迎访问我的个人网站，我是Lianmin Chen，一个来自华中科技大学计算机科学与技术学院的本科生。我的研究兴趣主要聚焦在机器学习领域，包括大模型、强化学习、零阶优化等方向。欢迎和我交流哇~</p>
+      <section class="about-overview section">
+        <article class="about-profile-card reveal">
+          <div class="about-section-label">
+            <span>01</span>
+            <p data-i18n="about.profile.title">个人简介</p>
           </div>
-          <div class="panel reveal delay-1">
-            <h4 data-i18n="about.experience.title">经历</h4>
-            <div class="experience-list">
-              <div class="experience-item">
-                <div class="exp-header">
-                  <span class="exp-time">2025 暑期 - Summer 2025</span>
-                  <span class="exp-location">湖北武汉 - Wuhan, Hubei</span>
-                </div>
-                <h5 class="exp-title">华为武汉研究所 - Huawei Wuhan Research Institute</h5>
-                <p class="exp-desc">暑期实习 - Summer Internship</p>
+          <p class="about-profile-lead" data-i18n="about.profile.lead">保持好奇，认真研究，也认真生活。</p>
+          <p class="about-profile-text" data-i18n="about.profile.desc">
+            你好呀！欢迎访问我的个人网站，我是 Lianmin Chen，一个来自华中科技大学计算机科学与技术学院的本科生。我的研究兴趣主要聚焦在机器学习领域，包括大模型、强化学习、零阶优化等方向。欢迎和我交流哇~
+          </p>
+        </article>
+
+        <aside class="about-focus-card reveal delay-1">
+          <div class="about-section-label">
+            <span>02</span>
+            <p data-i18n="about.focus.title">研究兴趣</p>
+          </div>
+          <div class="about-focus-list">
+            <div class="about-focus-item">
+              <span class="about-focus-number">01</span>
+              <div>
+                <strong>Large Language Models</strong>
+                <small data-i18n="about.focus.llm">大模型与智能系统</small>
               </div>
-              <div class="experience-item">
-                <div class="exp-header">
-                  <span class="exp-time">2022 - 现在 - 2022 - Present</span>
-                  <span class="exp-location">湖北武汉 - Wuhan, Hubei</span>
-                </div>
-                <h5 class="exp-title">华中科技大学 - Huazhong University of Science and Technology</h5>
-                <p class="exp-desc">本科生 - Undergraduate Student</p>
+            </div>
+            <div class="about-focus-item">
+              <span class="about-focus-number">02</span>
+              <div>
+                <strong>Reinforcement Learning</strong>
+                <small data-i18n="about.focus.rl">强化学习与决策</small>
+              </div>
+            </div>
+            <div class="about-focus-item">
+              <span class="about-focus-number">03</span>
+              <div>
+                <strong>Optimization</strong>
+                <small data-i18n="about.focus.opt">零阶优化与学习算法</small>
               </div>
             </div>
           </div>
-          <div class="panel reveal delay-2">
-            <h4 data-i18n="about.honor.title">荣誉与成果</h4>
-            <p class="desc" data-i18n="about.honor.desc">少而关键，只保留改变思考方向的节点。</p>
-            <ul class="honor-list">
-              <li class="honor-item">🏅 三好学生（好多次啊~）</li>
-            </ul>
+          <a class="about-focus-link" href="academic.html">
+            <span data-i18n="about.focus.link">查看学术与项目</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </aside>
+      </section>
+
+      <section class="about-journey section">
+        <div class="about-section-heading">
+          <div>
+            <p class="section-eyebrow">JOURNEY</p>
+            <h3 data-i18n="about.experience.title">经历</h3>
           </div>
+          <p data-i18n="about.experience.desc">每一段经历都在拓宽问题的边界，也让研究方向逐渐清晰。</p>
+        </div>
+        <div class="about-timeline">
+          <article class="about-timeline-item reveal">
+            <div class="about-timeline-date">
+              <strong>2025</strong>
+              <span data-i18n="about.experience.summer">夏季</span>
+            </div>
+            <div class="about-timeline-dot" aria-hidden="true"></div>
+            <div class="about-timeline-content">
+              <div class="about-timeline-meta">
+                <span data-i18n="about.experience.internship">暑期实习</span>
+                <span>Wuhan, China</span>
+              </div>
+              <h4>Huawei Wuhan Research Institute</h4>
+              <p>华为武汉研究所</p>
+            </div>
+          </article>
+          <article class="about-timeline-item reveal delay-1">
+            <div class="about-timeline-date">
+              <strong>2022—</strong>
+              <span data-i18n="about.experience.present">现在</span>
+            </div>
+            <div class="about-timeline-dot" aria-hidden="true"></div>
+            <div class="about-timeline-content">
+              <div class="about-timeline-meta">
+                <span data-i18n="about.pill2">本科生</span>
+                <span>Wuhan, China</span>
+              </div>
+              <h4>Huazhong University of Science and Technology</h4>
+              <p>华中科技大学 · 计算机科学与技术</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about-honors section reveal">
+        <div class="about-honor-copy">
+          <p class="section-eyebrow">MILESTONES</p>
+          <h3 data-i18n="about.honor.title">荣誉与成果</h3>
+          <p data-i18n="about.honor.desc">少而关键，只保留推动自己继续前进的节点。</p>
+        </div>
+        <div class="about-honor-card">
+          <span class="about-honor-mark" aria-hidden="true">✦</span>
+          <div>
+            <span data-i18n="about.honor.label">综合荣誉</span>
+            <strong data-i18n="about.honor.item">三好学生 · 多次获得</strong>
+          </div>
+          <span class="about-honor-year">HUST</span>
         </div>
       </section>
     </main>

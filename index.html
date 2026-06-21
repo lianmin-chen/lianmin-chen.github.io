@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>元衍极 | 首页</title>
-  <meta name="description" content="元衍极：以思维结构为核心资产的个人网站。" />
+  <title>元衍极 | 始于一元，衍至无极</title>
+  <meta name="description" content="Lianmin Chen 的个人研究与写作网站，记录机器学习研究、技术思考与生活观察。" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="home-page">
   <div class="page">
     <header class="site-header container">
       <div class="brand">
@@ -37,41 +38,118 @@
     </header>
 
     <main class="main container">
-      <section class="hero" id="home">
-        <div class="hero-content reveal">
-          <h2 data-i18n="index.title">多少事，从来急；<br>天地转，光阴迫。<br>一万年太久，只争朝夕！</h2>
-          <p class="lead" data-i18n="index.subtitle">元衍极 · 始于一元，衍至无极</p>
+      <section class="home-hero" id="home">
+        <div class="home-hero-content reveal">
+          <div class="home-wordmark" aria-hidden="true">
+            <img src="assets/images/white-logo.png" alt="" />
+          </div>
+          <p class="home-hero-poem" data-i18n="index.subtitle">
+            多少事，从来急；天地转，光阴迫。<br />
+            一万年太久，只争朝夕！
+          </p>
+          <p class="home-hero-intro" data-i18n="index.intro">
+            我是 Lianmin Chen，关注机器学习、大模型、强化学习与优化，在这里持续记录研究、思考与生活。
+          </p>
+          <div class="home-hero-actions">
+            <a class="home-button home-button--primary" href="academic.html" data-i18n="index.cta.research">探索研究</a>
+            <a class="home-button home-button--secondary" href="blog.html" data-i18n="index.cta.blog">阅读文章</a>
+          </div>
         </div>
-        <div class="hero-figure reveal delay-1">
-          <img id="figure-img" class="figure-img" alt="人物形象" />
+        <div class="home-hero-visual reveal delay-1">
+          <div class="home-orbit home-orbit--blue" aria-hidden="true"></div>
+          <div class="home-orbit home-orbit--red" aria-hidden="true"></div>
+          <div class="home-figure-frame">
+            <img
+              id="figure-img"
+              class="home-figure-img"
+              src="assets/images/light_figure3-4.png"
+              alt="元衍极个人角色形象"
+            />
+          </div>
+          <div class="home-figure-note">
+            <span class="home-figure-dot" aria-hidden="true"></span>
+            <span data-i18n="index.figure.note">观察 · 理解 · 洞察</span>
+          </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <p class="section-eyebrow" data-i18n="index.map.eyebrow">Sections</p>
-          <h3 data-i18n="index.map.title">栏目入口</h3>
+      <section class="home-sections section">
+        <div class="home-section-heading">
+          <div>
+            <p class="section-eyebrow" data-i18n="index.map.eyebrow">EXPLORE</p>
+            <h3 data-i18n="index.map.title">从这里继续探索</h3>
+          </div>
+          <p class="home-section-note" data-i18n="index.map.note">研究、写作与生活，共同构成持续生长的知识系统。</p>
         </div>
-        <div class="card-grid">
-          <a class="card" href="about.html">
-            <div class="card-title" data-i18n="index.map.about">关于我</div>
-            <p class="desc" data-i18n="index.map.aboutDesc">一个学生</p>
+        <div class="home-card-grid">
+          <a class="home-card home-card--research" href="academic.html">
+            <div class="home-card-topline">
+              <span class="home-card-index">01</span>
+              <span class="home-card-type">RESEARCH</span>
+            </div>
+            <span class="home-card-symbol" aria-hidden="true">
+              <span></span>
+            </span>
+            <div class="home-card-content">
+              <div class="home-card-title" data-i18n="index.map.academic">学术研究</div>
+              <p class="desc" data-i18n="index.map.academicDesc">论文、项目与可被检验的研究成果。</p>
+              <div class="home-card-tags" aria-hidden="true">
+                <span>Papers</span><span>Projects</span>
+              </div>
+            </div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="card" href="blog.html">
-            <div class="card-title" data-i18n="index.map.blog">博客文章</div>
-            <p class="desc" data-i18n="index.map.blogDesc">不断积累~</p>
+          <a class="home-card home-card--writing" href="blog.html">
+            <div class="home-card-topline">
+              <span class="home-card-index">02</span>
+              <span class="home-card-type">WRITING</span>
+            </div>
+            <span class="home-card-symbol" aria-hidden="true">
+              <span></span>
+            </span>
+            <div class="home-card-content">
+              <div class="home-card-title" data-i18n="index.map.blog">技术博客</div>
+              <p class="desc" data-i18n="index.map.blogDesc">记录清晰、可追踪的学习与推理路径。</p>
+              <div class="home-card-tags" aria-hidden="true">
+                <span>ML</span><span>LLM</span><span>Notes</span>
+              </div>
+            </div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="card" href="academic.html">
-            <div class="card-title" data-i18n="index.map.academic">学术</div>
-            <p class="desc" data-i18n="index.map.academicDesc">可被严肃引用的输出。</p>
+          <a class="home-card home-card--life" href="life.html">
+            <div class="home-card-topline">
+              <span class="home-card-index">03</span>
+              <span class="home-card-type">LIFE</span>
+            </div>
+            <span class="home-card-symbol" aria-hidden="true">
+              <span></span>
+            </span>
+            <div class="home-card-content">
+              <div class="home-card-title" data-i18n="index.map.life">生活札记</div>
+              <p class="desc" data-i18n="index.map.lifeDesc">首先，好好生活；然后认真观察。</p>
+              <div class="home-card-tags" aria-hidden="true">
+                <span>Review</span><span>Daily</span>
+              </div>
+            </div>
+            <span class="home-card-arrow" aria-hidden="true">↗</span>
           </a>
-          <a class="card" href="life.html">
-            <div class="card-title" data-i18n="index.map.life">生活</div>
-            <p class="desc" data-i18n="index.map.lifeDesc">首先，好好生活。</p>
+        </div>
+        <div class="home-secondary-links">
+          <a class="home-secondary-link" href="about.html">
+            <span class="home-secondary-index">04</span>
+            <span class="home-secondary-copy">
+              <strong data-i18n="index.map.about">关于我</strong>
+              <small data-i18n="index.map.aboutDesc">一个学生</small>
+            </span>
+            <span class="home-secondary-arrow" aria-hidden="true">→</span>
           </a>
-          <a class="card" href="contact.html">
-            <div class="card-title" data-i18n="index.map.contact">联系方式</div>
-            <p class="desc" data-i18n="index.map.contactDesc">开放而克制的连接方式。</p>
+          <a class="home-secondary-link" href="contact.html">
+            <span class="home-secondary-index">05</span>
+            <span class="home-secondary-copy">
+              <strong data-i18n="index.map.contact">联系我</strong>
+              <small data-i18n="index.map.contactDesc">开放而克制的连接方式。</small>
+            </span>
+            <span class="home-secondary-arrow" aria-hidden="true">→</span>
           </a>
         </div>
       </section>
