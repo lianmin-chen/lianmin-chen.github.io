@@ -1,6 +1,24 @@
 const root = document.documentElement;
 const themeToggle = document.getElementById("theme-toggle");
 const langButtons = document.querySelectorAll(".lang-switch button");
+const siteHeader = document.querySelector(".site-header");
+
+function syncFixedHeader() {
+  if (!siteHeader) return;
+  root.style.setProperty("--site-header-height", `${siteHeader.offsetHeight}px`);
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 12);
+}
+
+if (siteHeader) {
+  syncFixedHeader();
+  window.addEventListener("scroll", syncFixedHeader, { passive: true });
+  window.addEventListener("resize", syncFixedHeader);
+
+  if ("ResizeObserver" in window) {
+    const headerObserver = new ResizeObserver(syncFixedHeader);
+    headerObserver.observe(siteHeader);
+  }
+}
 
 const translations = {
   zh: {
@@ -309,6 +327,7 @@ function setLanguage(lang) {
     themeToggle.textContent = themeLabels[currentTheme][lang];
   }
   document.documentElement.lang = lang === "zh" ? "zh" : "en";
+  requestAnimationFrame(syncFixedHeader);
 }
 
 if (themeToggle) {

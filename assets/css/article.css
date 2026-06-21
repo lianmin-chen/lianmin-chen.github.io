@@ -234,7 +234,7 @@
   margin: 24px 0 12px 0;
   font-weight: 600;
   color: var(--text);
-  scroll-margin-top: 110px;
+  scroll-margin-top: calc(var(--site-header-height) + 20px);
 }
 
 .article-content h1 {

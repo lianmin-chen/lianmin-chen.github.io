@@ -14,6 +14,7 @@
   --radius-md: 14px;
   --logo-bg-size: 100vw;
   --logo-bg-opacity: 0.18;
+  --site-header-height: 104px;
 }
 
 [data-theme="light"] {
@@ -56,6 +57,7 @@ body {
   color: var(--text);
   background: var(--bg);
   min-height: 100vh;
+  scroll-padding-top: calc(var(--site-header-height) + 24px);
 }
 
 h1, h2, h3, h4 {
@@ -115,14 +117,35 @@ footer {
 }
 
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: none;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 1.2fr 1fr auto;
+  grid-template-areas: "brand nav actions";
   align-items: center;
   gap: 24px;
-  padding: 26px 0 10px;
+  padding: 14px max(4vw, calc((100vw - 1180px) / 2));
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  transition: padding 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  padding-top: 9px;
+  padding-bottom: 9px;
+  box-shadow: 0 12px 36px rgba(15, 23, 42, 0.12);
 }
 
 .brand {
+  grid-area: brand;
   display: flex;
   align-items: center;
   gap: 16px;
@@ -152,6 +175,7 @@ footer {
 }
 
 .nav {
+  grid-area: nav;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -188,6 +212,7 @@ footer {
 }
 
 .header-actions {
+  grid-area: actions;
   display: flex;
   align-items: center;
   gap: 12px;
@@ -223,7 +248,7 @@ footer {
 }
 
 .main {
-  padding: 34px 0 80px;
+  padding: calc(var(--site-header-height) + 34px) 0 80px;
 }
 
 .hero {
@@ -1012,17 +1037,69 @@ button.contact-link {
 
 @media (max-width: 900px) {
   .site-header {
-    grid-template-columns: 1fr;
-    justify-items: start;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "brand actions"
+      "nav nav";
+    gap: 12px 18px;
+    padding: 12px 4vw 10px;
   }
 
   .header-actions {
+    justify-content: flex-end;
+  }
+
+  .nav {
     width: 100%;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 22px;
+    padding: 3px 0 5px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+
+  .nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav a {
+    flex: 0 0 auto;
   }
 }
 
 @media (max-width: 680px) {
+  .site-header {
+    gap: 10px 12px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .logo img {
+    width: 48px;
+  }
+
+  .brand h1 {
+    font-size: 1.25rem;
+  }
+
+  .tagline {
+    display: none;
+  }
+
+  .nav {
+    font-size: 1rem;
+    gap: 20px;
+  }
+
+  .toggle,
+  .lang-switch button {
+    padding: 5px 9px;
+  }
+
   .hero {
     padding: 28px;
   }
