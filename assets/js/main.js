@@ -3,6 +3,43 @@ const themeToggle = document.getElementById("theme-toggle");
 const langButtons = document.querySelectorAll(".lang-switch button");
 const siteHeader = document.querySelector(".site-header");
 
+function initNavigation() {
+  if (!siteHeader) return;
+  const nav = siteHeader.querySelector(".nav");
+  const actions = siteHeader.querySelector(".header-actions");
+  if (!nav || !actions || siteHeader.querySelector(".nav-toggle")) return;
+
+  nav.id = nav.id || "site-navigation";
+  const toggle = document.createElement("button");
+  toggle.className = "nav-toggle";
+  toggle.type = "button";
+  toggle.setAttribute("aria-controls", nav.id);
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "打开导航菜单");
+  toggle.innerHTML = "<span></span><span></span><span></span>";
+  siteHeader.insertBefore(toggle, actions);
+
+  const closeMenu = () => {
+    siteHeader.classList.remove("nav-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "打开导航菜单");
+  };
+
+  toggle.addEventListener("click", () => {
+    const isOpen = siteHeader.classList.toggle("nav-open");
+    toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+    toggle.setAttribute("aria-label", isOpen ? "关闭导航菜单" : "打开导航菜单");
+  });
+
+  nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeMenu();
+  });
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 760) closeMenu();
+  });
+}
+
 function syncFixedHeader() {
   if (!siteHeader) return;
   root.style.setProperty("--site-header-height", `${siteHeader.offsetHeight}px`);
@@ -819,11 +856,13 @@ function initContactMediaToggles() {
 
 // Initialize on page load
 if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initNavigation);
   document.addEventListener("DOMContentLoaded", initBlogPage);
   document.addEventListener("DOMContentLoaded", initLifePage);
   document.addEventListener("DOMContentLoaded", initSiteStats);
   document.addEventListener("DOMContentLoaded", initContactMediaToggles);
 } else {
+  initNavigation();
   initBlogPage();
   initLifePage();
   initSiteStats();
