@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 博客文章</title>
-  <meta name="description" content="元衍极：结构化思想的长期积累中心。" />
+  <meta name="description" content="Lianmin Chen 的技术博客，记录机器学习、人工智能与结构化思考。" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="blog-page">
   <div class="page">
     <header class="site-header container">
       <div class="brand">
@@ -36,41 +37,67 @@
       </div>
     </header>
 
-    <main class="main container">
-      <section class="hero hero--compact">
-        <div class="hero-content reveal">
-          <p class="eyebrow" data-i18n="blog.eyebrow">Blog</p>
-          <h2 data-i18n="blog.title">不断积累~</h2>
-          <p class="lead" data-i18n="blog.subtitle">分享自己的认识和思考</p>
+    <main class="main container blog-main">
+      <section class="blog-hero">
+        <div class="blog-hero-copy reveal">
+          <p class="blog-kicker" data-i18n="blog.eyebrow">BLOG · 知识索引</p>
+          <h2 data-i18n="blog.title">记录思考，<br><span>持续生长。</span></h2>
+          <p class="blog-hero-lead" data-i18n="blog.subtitle">
+            围绕机器学习、人工智能与结构化思考，记录可以被追踪、复用和继续推演的知识。
+          </p>
+          <div class="blog-hero-tags" aria-label="Blog topics">
+            <span>Machine Learning</span>
+            <span>LLM</span>
+            <span>Reinforcement Learning</span>
+            <span>Optimization</span>
+          </div>
         </div>
+        <aside class="blog-manifesto reveal delay-1">
+          <div class="blog-manifesto-mark" aria-hidden="true"><span></span></div>
+          <p data-i18n="blog.manifesto.label">WRITING PRINCIPLE</p>
+          <blockquote data-i18n="blog.manifesto.quote">先建立结构，再填充细节；先记录路径，再给出结论。</blockquote>
+          <div class="blog-manifesto-meta">
+            <span>EST. 2026</span>
+            <span>LONG-TERM NOTES</span>
+          </div>
+        </aside>
       </section>
 
-      <section class="section">
+      <section class="blog-tool-section">
         <div class="blog-controls reveal">
-          <div class="search-box">
-            <input type="text" id="blog-search" placeholder="搜索文章..." class="search-input" />
-          </div>
-          <div class="sort-controls">
-            <button class="sort-btn active" data-sort="latest">最新优先</button>
-            <button class="sort-btn" data-sort="oldest">最早优先</button>
+          <label class="blog-search" for="blog-search">
+            <span class="blog-search-icon" aria-hidden="true"></span>
+            <input type="text" id="blog-search" placeholder="搜索标题、专题或关键词..." class="search-input" />
+            <span class="blog-search-hint">SEARCH</span>
+          </label>
+          <div class="sort-controls" aria-label="文章排序">
+            <span class="blog-sort-label" data-i18n="blog.sort.label">排序</span>
+            <button class="sort-btn active" data-sort="latest" data-i18n="blog.sort.latest">最新</button>
+            <button class="sort-btn" data-sort="oldest" data-i18n="blog.sort.oldest">最早</button>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <p class="section-eyebrow">Topics</p>
-          <h3>专题文章</h3>
+      <section class="blog-content-section section">
+        <div class="blog-section-heading">
+          <div>
+            <p class="section-eyebrow">TOPIC SERIES</p>
+            <h3 data-i18n="blog.topic.heading">专题系列</h3>
+          </div>
+          <p data-i18n="blog.topic.intro">围绕一个核心问题持续展开，保留文章之间的推演关系。</p>
         </div>
-        <div id="topics-container" class="topics-grid"><!-- 动态生成 --></div>
+        <div id="topics-container" class="blog-topics-grid"><!-- 动态生成 --></div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <p class="section-eyebrow">Articles</p>
-          <h3>独立文章</h3>
+      <section class="blog-content-section blog-articles-section section">
+        <div class="blog-section-heading">
+          <div>
+            <p class="section-eyebrow">ARTICLE INDEX</p>
+            <h3 data-i18n="blog.article.heading">独立文章</h3>
+          </div>
+          <p data-i18n="blog.article.intro">不依赖专题的单篇记录，按时间形成持续更新的思想索引。</p>
         </div>
-        <div id="articles-container" class="articles-grid"><!-- 动态生成 --></div>
+        <div id="articles-container" class="blog-articles-list"><!-- 动态生成 --></div>
       </section>
     </main>
 

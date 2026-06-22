@@ -104,9 +104,18 @@ const translations = {
     "about.honor.label": "综合荣誉",
     "about.honor.item": "三好学生 · 多次获得",
 
-    "blog.eyebrow": "Blog",
-    "blog.title": "不断积累~",
-    "blog.subtitle": "分享自己的认识和思考。",
+    "blog.eyebrow": "BLOG · 知识索引",
+    "blog.title": "记录思考，<br><span>持续生长。</span>",
+    "blog.subtitle": "围绕机器学习、人工智能与结构化思考，记录可以被追踪、复用和继续推演的知识。",
+    "blog.manifesto.label": "写作原则",
+    "blog.manifesto.quote": "先建立结构，再填充细节；先记录路径，再给出结论。",
+    "blog.sort.label": "排序",
+    "blog.sort.latest": "最新",
+    "blog.sort.oldest": "最早",
+    "blog.topic.heading": "专题系列",
+    "blog.topic.intro": "围绕一个核心问题持续展开，保留文章之间的推演关系。",
+    "blog.article.heading": "独立文章",
+    "blog.article.intro": "不依赖专题的单篇记录，按时间形成持续更新的思想索引。",
     "blog.topic.title": "专题 / 文章集合",
     "blog.topic.desc": "每个专题包含写作动机、总体脉络说明与有顺序的文章列表。",
     "blog.topic.list1": "写作动机：问题为何重要。",
@@ -121,15 +130,18 @@ const translations = {
     "blog.list.item2": "推理路径的可复现性：从方法到系统",
     "blog.list.item3": "复杂问题拆解：找到不变量与边界",
 
-    "academic.eyebrow": "Academic",
-    "academic.title": "可被学术与工业界严肃对待的输出",
-    "academic.subtitle": "清晰胜过华丽，引用胜过堆叠。",
+    "academic.eyebrow": "ACADEMIC · 研究档案",
+    "academic.title": "研究需要被<br><span>清晰地检验。</span>",
+    "academic.subtitle": "从问题定义、实验设计到结果表达，记录那些能够被讨论、复现与继续推进的研究工作。",
+    "academic.status": "探索问题，构建方法，验证结论。",
     "academic.idea.title": "总括",
     "academic.idea.desc": "以可复现、可引用、可扩展为最低标准，持续累积可被检验的成果。",
-    "academic.paper.title": "论文列表",
+    "academic.paper.title": "论文与成果",
     "academic.paper.item1": "结构化推理框架：从假设到系统 (2025)",
     "academic.paper.item2": "认知结构的可扩展性研究 (2024)",
     "academic.project.title": "项目列表",
+    "academic.project.intro": "把研究中的方法、工具与知识组织方式沉淀成可持续迭代的系统。",
+    "academic.project.state": "研究原型 · 持续迭代",
     "academic.project.item1": "推理路径可视化工具",
     "academic.project.item2": "知识结构化的写作流程",
     "academic.links.title": "学术入口",
@@ -137,25 +149,31 @@ const translations = {
     "academic.links.dblp": "计算机领域文献索引",
     "academic.links.openreview": "评审与学术讨论平台",
 
-    "life.eyebrow": "Life",
-    "life.title": "首先，好好生活。",
-    "life.subtitle": "记录短而收敛的观察，不追热点。",
+    "life.eyebrow": "LIFE · 日常观察",
+    "life.title": "首先，<br><span>好好生活。</span>",
+    "life.subtitle": "阅读、运动、音乐、城市与人的细节，构成研究之外的另一套知识系统。这里收集缓慢发生、值得记住的日常。",
+    "life.quote": "生活不是研究之外的空白，它是所有思考最终需要返回的地方。",
+    "life.series.title": "缓慢展开的系列",
+    "life.series.desc": "不追逐更新频率，只记录值得回看的变化与问题。",
+    "life.notes.title": "独立札记",
+    "life.notes.desc": "一些短而收敛的表达，保存当时真实的观察。",
     "life.note": "这是一个让读者看到人的地方，但不喧宾夺主。",
     "life.item1": "在安静里复盘一周的结构性问题。",
     "life.item2": "把复杂问题写成可以分享的日常。",
     "life.item3": "让表达比情绪更清晰。",
 
-    "contact.eyebrow": "Contact",
-    "contact.title": "开放而克制的连接方式",
-    "contact.subtitle": "如果你对我的文章或思考方式有共鸣，欢迎联系我。",
+    "contact.eyebrow": "CONTACT · 建立连接",
+    "contact.title": "开放交流，<br><span>保持真诚。</span>",
+    "contact.subtitle": "欢迎讨论研究、技术与写作，也欢迎交换尚未成熟的想法。请选择最适合当前话题的连接方式。",
+    "contact.status": "开放交流与合作",
     "contact.email": "LianminChen@outlook.com",
     "contact.github": "https://github.com/lianmin-chen",
     "contact.note": "常用邮箱",
     "contact.open": "公开协作",
-    "contact.media": "平台矩阵",
+    "contact.media": "内容平台",
     "contact.email.desc": "学术合作、项目邀约与长期交流均可通过邮件联系。",
     "contact.github.desc": "代码、实验与文档的最新更新会同步在这里。",
-    "contact.media.desc": "适合发布长文、公开视频与即时资讯。",
+    "contact.media.desc": "不同媒介承载不同密度的表达，也留下持续更新的路径。",
     "contact.media.wechat": "知乎",
     "contact.media.bilibili": "哔哩哔哩",
     "contact.media.linkedin": "微信公众号",
@@ -171,9 +189,11 @@ const translations = {
     "contact.media.xiaohongshu.link": "打开小红书主页",
     "contact.media.wechat.title": "微信公众号",
     "contact.media.wechat.desc": "简短更新与系列文章发布。",
+    "contact.media.wechat.tip": "微信搜索「元衍极」或扫描右侧二维码",
 
     "footer.copyright": "本站内容与设计未经允许，不得以任何形式转载或用于商业目的。",
-    "article.toc": "目录"
+    "article.toc": "目录",
+    "article.end": "感谢阅读。愿每一次记录都让思考更清晰。"
   },
   en: {
       "brand.name": "OriginX",
@@ -258,9 +278,18 @@ const translations = {
     "about.honor.label": "General Honor",
     "about.honor.item": "Outstanding Student · Multiple Awards",
 
-    "blog.eyebrow": "Blog",
-    "blog.title": "A place for continuous accumulation",
-    "blog.subtitle": "Sharing my understanding and thoughts",
+    "blog.eyebrow": "BLOG · KNOWLEDGE INDEX",
+    "blog.title": "Document ideas.<br><span>Keep growing.</span>",
+    "blog.subtitle": "Notes on machine learning, artificial intelligence, and structured thinking—written to be traced, reused, and extended.",
+    "blog.manifesto.label": "WRITING PRINCIPLE",
+    "blog.manifesto.quote": "Build the structure before filling in details; preserve the path before presenting the conclusion.",
+    "blog.sort.label": "SORT",
+    "blog.sort.latest": "Latest",
+    "blog.sort.oldest": "Oldest",
+    "blog.topic.heading": "Topic Series",
+    "blog.topic.intro": "Continuous explorations of core questions, preserving the reasoning between articles.",
+    "blog.article.heading": "Independent Articles",
+    "blog.article.intro": "Standalone notes that form a continuously updated index of ideas over time.",
     "blog.topic.title": "Topics / Series",
     "blog.topic.desc": "Each topic includes motivation, a clear map, and ordered essays.",
     "blog.topic.list1": "Motivation: why the problem matters.",
@@ -275,15 +304,18 @@ const translations = {
     "blog.list.item2": "Reproducible reasoning paths: from method to system",
     "blog.list.item3": "Decomposing complexity: invariants and boundaries",
 
-    "academic.eyebrow": "Academic",
-    "academic.title": "Outputs that can be taken seriously",
-    "academic.subtitle": "Clarity beats decoration; citation beats accumulation.",
+    "academic.eyebrow": "ACADEMIC · RESEARCH ARCHIVE",
+    "academic.title": "Research should be<br><span>clearly testable.</span>",
+    "academic.subtitle": "From problem framing and experimental design to communication, this archive records work that can be discussed, reproduced, and advanced.",
+    "academic.status": "Explore questions, build methods, verify conclusions.",
     "academic.idea.title": "Overview",
     "academic.idea.desc": "Set reproducibility, citation, and extensibility as the baseline, and accumulate verifiable results over time.",
-    "academic.paper.title": "Papers",
+    "academic.paper.title": "Papers & Results",
     "academic.paper.item1": "A framework for structured reasoning (2025)",
     "academic.paper.item2": "Expandable cognitive architectures (2024)",
     "academic.project.title": "Projects",
+    "academic.project.intro": "Turn research methods, tools, and knowledge organization into systems that can keep evolving.",
+    "academic.project.state": "Research prototype · In progress",
     "academic.project.item1": "Reasoning path visualization",
     "academic.project.item2": "Structured writing workflow",
     "academic.links.title": "Academic Profiles",
@@ -291,25 +323,31 @@ const translations = {
     "academic.links.dblp": "Computer science bibliography",
     "academic.links.openreview": "Reviews and scholarly discussion",
 
-    "life.eyebrow": "Life",
-    "life.title": "First, live well.",
-    "life.subtitle": "Short, quiet notes with no trend chasing.",
+    "life.eyebrow": "LIFE · DAILY OBSERVATIONS",
+    "life.title": "First,<br><span>live well.</span>",
+    "life.subtitle": "Reading, movement, music, cities, and people form another knowledge system beyond research—slow moments worth keeping.",
+    "life.quote": "Life is not the blank space outside research; it is where every line of thinking eventually returns.",
+    "life.series.title": "Slow Series",
+    "life.series.desc": "No race for frequency—only changes and questions worth revisiting.",
+    "life.notes.title": "Independent Notes",
+    "life.notes.desc": "Short, focused pieces preserving honest observations from a moment in time.",
     "life.note": "A place to reveal the person without taking over the site.",
     "life.item1": "Reviewing the week's structural questions in silence.",
     "life.item2": "Turning complexity into shareable daily notes.",
     "life.item3": "Letting clarity speak louder than emotion.",
 
-    "contact.eyebrow": "Contact",
-    "contact.title": "Open yet restrained",
-    "contact.subtitle": "If my writing or thinking resonates with you, feel free to reach out.",
+    "contact.eyebrow": "CONTACT · CONNECT",
+    "contact.title": "Open exchange,<br><span>genuine intent.</span>",
+    "contact.subtitle": "Conversations about research, technology, writing, and unfinished ideas are welcome. Choose the channel that best fits the topic.",
+    "contact.status": "OPEN FOR IDEAS & COLLABORATION",
     "contact.email": "LianminChen@outlook.com",
     "contact.github": "https://github.com/lianmin-chen",
     "contact.note": "Primary inbox",
     "contact.open": "Open collaboration",
-    "contact.media": "Media network",
+    "contact.media": "Content Platforms",
     "contact.email.desc": "For academic collaboration, project invitations, and long-term exchanges.",
     "contact.github.desc": "Latest code, experiments, and documentation updates are mirrored here.",
-    "contact.media.desc": "Best for long reads, public videos, and quick updates.",
+    "contact.media.desc": "Different media support different densities of expression and ongoing updates.",
     "contact.media.wechat": "Zhihu",
     "contact.media.bilibili": "Bilibili",
     "contact.media.linkedin": "WeChat Official Account",
@@ -325,9 +363,11 @@ const translations = {
     "contact.media.xiaohongshu.link": "Open Xiaohongshu profile",
     "contact.media.wechat.title": "WeChat Official Account",
     "contact.media.wechat.desc": "Short updates and series posts appear here.",
+    "contact.media.wechat.tip": "Search “元衍极” in WeChat or scan the QR code",
 
     "footer.copyright": "Content and design of this site must not be reproduced or used for commercial purposes without permission.",
-    "article.toc": "Table of contents"
+    "article.toc": "Table of contents",
+    "article.end": "Thank you for reading. May every note make the thinking clearer."
   }
 };
 
@@ -489,23 +529,31 @@ function renderTopics(topics) {
   const container = document.getElementById("topics-container");
   if (!container) return;
   
-  container.innerHTML = topics.map(topic => `
-    <div class="topic-card reveal">
-      <div class="topic-header" onclick="toggleTopic('${topic.id}')">
-        <h4 class="topic-title">${topic.title}</h4>
-        <div class="topic-toggle">▼</div>
+  container.innerHTML = topics.map((topic, index) => `
+    <article class="blog-topic-card reveal">
+      <button class="blog-topic-trigger" type="button" onclick="toggleTopic('${topic.id}', this)" aria-expanded="false">
+        <span class="blog-topic-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="blog-topic-heading">
+          <span class="blog-topic-label">TOPIC SERIES</span>
+          <strong>${topic.title}</strong>
+        </span>
+        <span class="blog-topic-toggle" aria-hidden="true">＋</span>
+      </button>
+      <p class="blog-topic-desc">${topic.description}</p>
+      <div class="blog-topic-footer">
+        <span>${topic.articles.length} 篇文章</span>
+        <time>${topic.date}</time>
       </div>
-      <p class="topic-desc">${topic.description}</p>
-      <div class="topic-count">${topic.articles.length} 篇文章</div>
-      <div class="topic-articles" id="articles-${topic.id}">
+      <div class="blog-topic-articles" id="articles-${topic.id}">
         ${topic.articles.map(article => `
-          <div class="article-item" onclick="openArticle('${article.id}')">
-            <div class="article-item-title">${article.title}</div>
-            <div class="article-item-meta">${article.date}</div>
-          </div>
+          <button class="blog-topic-article" type="button" onclick="openArticle('${article.id}')">
+            <span>${article.title}</span>
+            <time>${article.date}</time>
+            <span aria-hidden="true">↗</span>
+          </button>
         `).join("")}
       </div>
-    </div>
+    </article>
   `).join("");
 }
 
@@ -513,11 +561,16 @@ function renderArticles(articles) {
   const container = document.getElementById("articles-container");
   if (!container) return;
   
-  container.innerHTML = articles.map(article => `
-    <div class="article-card reveal" onclick="openArticle('${article.id}')">
-      <h4 class="article-card-title">${article.title}</h4>
-      <div class="article-card-meta">${article.date} · ${article.category}</div>
-    </div>
+  container.innerHTML = articles.map((article, index) => `
+    <button class="blog-article-row reveal" type="button" onclick="openArticle('${article.id}')">
+      <span class="blog-article-number">${String(index + 1).padStart(2, "0")}</span>
+      <span class="blog-article-copy">
+        <span class="blog-article-category">${article.category}</span>
+        <strong>${article.title}</strong>
+      </span>
+      <time>${article.date}</time>
+      <span class="blog-article-arrow" aria-hidden="true">↗</span>
+    </button>
   `).join("");
 }
 
@@ -551,23 +604,26 @@ function renderLifeTopics(topics) {
   const container = document.getElementById("life-topics-container");
   if (!container) return;
 
-  container.innerHTML = topics.map(topic => `
-    <div class="topic-card reveal">
-      <div class="topic-header" onclick="toggleTopic('${topic.id}')">
-        <h4 class="topic-title">${topic.title}</h4>
-        <div class="topic-toggle">▼</div>
-      </div>
-      <p class="topic-desc">${topic.description}</p>
-      <div class="topic-count">${topic.articles.length} 篇文章</div>
-      <div class="topic-articles" id="articles-${topic.id}">
+  container.innerHTML = topics.map((topic, index) => `
+    <article class="life-topic-card reveal">
+      <button class="life-topic-trigger" type="button" onclick="toggleTopic('${topic.id}', this)" aria-expanded="false">
+        <span class="life-topic-index">${String(index + 1).padStart(2, "0")}</span>
+        <span class="life-topic-copy">
+          <span>SLOW SERIES</span>
+          <strong>${topic.title}</strong>
+        </span>
+        <span class="life-topic-toggle topic-toggle" aria-hidden="true">＋</span>
+      </button>
+      <p class="life-topic-desc">${topic.description}</p>
+      <div class="life-topic-meta"><span>${topic.articles.length} 篇札记</span><time>${topic.date}</time></div>
+      <div class="life-topic-articles topic-articles" id="articles-${topic.id}">
         ${topic.articles.map(article => `
-          <div class="article-item" onclick="openLifeArticle('${article.id}')">
-            <div class="article-item-title">${article.title}</div>
-            <div class="article-item-meta">${article.date}</div>
-          </div>
+          <button class="life-topic-article" type="button" onclick="openLifeArticle('${article.id}')">
+            <span>${article.title}</span><time>${article.date}</time><span aria-hidden="true">↗</span>
+          </button>
         `).join("")}
       </div>
-    </div>
+    </article>
   `).join("");
 }
 
@@ -575,20 +631,30 @@ function renderLifeArticles(articles) {
   const container = document.getElementById("life-articles-container");
   if (!container) return;
 
-  container.innerHTML = articles.map(article => `
-    <div class="article-card reveal" onclick="openLifeArticle('${article.id}')">
-      <h4 class="article-card-title">${article.title}</h4>
-      <div class="article-card-meta">${article.date} · ${article.category || "生活"}</div>
-    </div>
+  container.innerHTML = articles.map((article, index) => `
+    <button class="life-note-row reveal" type="button" onclick="openLifeArticle('${article.id}')">
+      <span class="life-note-number">${String(index + 1).padStart(2, "0")}</span>
+      <span class="life-note-copy"><small>${article.category || "LIFE"}</small><strong>${article.title}</strong></span>
+      <time>${article.date}</time><span class="life-note-arrow" aria-hidden="true">↗</span>
+    </button>
   `).join("");
 }
 
-function toggleTopic(topicId) {
+function toggleTopic(topicId, trigger) {
   const container = document.getElementById(`articles-${topicId}`);
-  const toggle = event.currentTarget.querySelector(".topic-toggle");
   if (container) {
     container.classList.toggle("open");
-    toggle.classList.toggle("open");
+    const isOpen = container.classList.contains("open");
+    if (trigger) {
+      trigger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      const toggle = trigger.querySelector(".topic-toggle, .blog-topic-toggle");
+      if (toggle) {
+        toggle.classList.toggle("open", isOpen);
+        if (toggle.classList.contains("blog-topic-toggle") || toggle.classList.contains("life-topic-toggle")) {
+          toggle.textContent = isOpen ? "−" : "＋";
+        }
+      }
+    }
   }
 }
 

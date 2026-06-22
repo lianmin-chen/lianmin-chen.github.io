@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 生活</title>
-  <meta name="description" content="元衍极：低频、真实、克制的个人侧面。" />
+  <meta name="description" content="Lianmin Chen 的生活札记：复盘、观察与成长记录。" />
+  <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body class="life-page">
   <div class="page">
     <header class="site-header container">
       <div class="brand">
@@ -36,41 +37,45 @@
       </div>
     </header>
 
-    <main class="main container">
-      <section class="hero hero--compact">
-        <div class="hero-content reveal">
-          <p class="eyebrow" data-i18n="life.eyebrow">Life</p>
-          <h2 data-i18n="life.title">首先，好好生活。</h2>
-          <p class="lead" data-i18n="life.subtitle">记录短而收敛的观察，不追热点。</p>
+    <main class="main container life-main">
+      <section class="life-hero">
+        <div class="life-hero-copy reveal">
+          <p class="life-kicker" data-i18n="life.eyebrow">LIFE · 日常观察</p>
+          <h2 data-i18n="life.title">首先，<br><span>好好生活。</span></h2>
+          <p class="life-lead" data-i18n="life.subtitle">记录低频但完整的观察：复盘一段时间，也保存那些让生活变得清晰的瞬间。</p>
+          <div class="life-keywords"><span>Review</span><span>Observation</span><span>Growth</span><span>Daily Notes</span></div>
         </div>
+        <aside class="life-quote reveal delay-1">
+          <span class="life-quote-mark">“</span>
+          <blockquote data-i18n="life.quote">生活不是研究之外的空白，它是所有思考最终需要返回的地方。</blockquote>
+          <div><span>PERSONAL NOTES</span><span>2026</span></div>
+        </aside>
       </section>
 
-      <section class="section">
-        <div class="blog-controls life-controls reveal">
-          <div class="search-box">
-            <input type="text" id="life-search" placeholder="搜索文章..." class="search-input" />
-          </div>
+      <section class="life-tool-section">
+        <div class="life-controls reveal">
+          <label class="life-search" for="life-search"><span aria-hidden="true"></span><input type="text" id="life-search" placeholder="搜索生活札记..." class="search-input" /></label>
           <div class="sort-controls">
-            <button class="sort-btn active" data-sort="latest">最新优先</button>
-            <button class="sort-btn" data-sort="oldest">最早优先</button>
+            <button class="sort-btn active" data-sort="latest" data-i18n="blog.sort.latest">最新</button>
+            <button class="sort-btn" data-sort="oldest" data-i18n="blog.sort.oldest">最早</button>
           </div>
         </div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <p class="section-eyebrow">Topics</p>
-          <h3>专题文章</h3>
+      <section class="life-content-section section">
+        <div class="life-section-heading">
+          <div><p class="section-eyebrow">SLOW SERIES</p><h3 data-i18n="life.series.title">缓慢展开的系列</h3></div>
+          <p data-i18n="life.series.desc">不追逐更新频率，只记录值得回看的变化与问题。</p>
         </div>
-        <div id="life-topics-container" class="topics-grid"><!-- 动态生成 --></div>
+        <div id="life-topics-container" class="life-topics-grid"><!-- 动态生成 --></div>
       </section>
 
-      <section class="section">
-        <div class="section-header">
-          <p class="section-eyebrow">Articles</p>
-          <h3>独立文章</h3>
+      <section class="life-content-section life-notes-section section">
+        <div class="life-section-heading">
+          <div><p class="section-eyebrow">RECENT NOTES</p><h3 data-i18n="life.notes.title">独立札记</h3></div>
+          <p data-i18n="life.notes.desc">一些短而收敛的表达，保存当时真实的观察。</p>
         </div>
-        <div id="life-articles-container" class="articles-grid"><!-- 动态生成 --></div>
+        <div id="life-articles-container" class="life-notes-list"><!-- 动态生成 --></div>
       </section>
     </main>
 

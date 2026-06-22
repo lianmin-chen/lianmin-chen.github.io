@@ -270,11 +270,13 @@ async function displayArticle() {
     const cleanHtml = DOMPurify.sanitize(html);
     
     titleEl.textContent = title;
+    document.title = `${title} | 元衍极`;
     contentEl.innerHTML = cleanHtml;
     
     // Process block math formulas in the DOM
     processBlockMathInDOM(contentEl);
     buildArticleToc(contentEl);
+    requestAnimationFrame(updateReadingProgress);
     
     // Extract date from URL or markdown
     const dateMatch = markdown.match(/\*更新于\s+(.+)\*/);
@@ -286,9 +288,25 @@ async function displayArticle() {
   }
 }
 
+function updateReadingProgress() {
+  const progress = document.getElementById("reading-progress");
+  const article = document.querySelector(".article-page");
+  if (!progress || !article) return;
+  const rect = article.getBoundingClientRect();
+  const articleTop = window.scrollY + rect.top;
+  const total = Math.max(article.offsetHeight - window.innerHeight, 1);
+  const current = Math.min(Math.max(window.scrollY - articleTop, 0), total);
+  progress.style.transform = `scaleX(${current / total})`;
+}
+
+window.addEventListener("scroll", updateReadingProgress, { passive: true });
+window.addEventListener("resize", updateReadingProgress);
+
 // Initialize on page load
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", displayArticle);
+  document.addEventListener("DOMContentLoaded", updateReadingProgress);
 } else {
   displayArticle();
+  updateReadingProgress();
 }
