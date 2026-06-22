@@ -69,6 +69,10 @@ const translations = {
     "nav.contact": "联系方式",
     "nav.links": "相关链接",
     "footer.note": "始于一元，衍至无极",
+    "footer.intro": "记录研究、写作与生活。",
+    "footer.navigate": "站点导航",
+    "footer.connect": "保持连接",
+    "footer.top": "返回顶部",
 
     "index.eyebrow": "个人研究与写作",
     "index.title": "始于一元，<span>衍至无极</span>",
@@ -259,6 +263,10 @@ const translations = {
     "nav.contact": "Contact",
     "nav.links": "Links",
     "footer.note": "From the One, Toward the Infinite",
+    "footer.intro": "Notes on research, writing, and life.",
+    "footer.navigate": "Navigation",
+    "footer.connect": "Stay Connected",
+    "footer.top": "Back to Top",
 
     "index.eyebrow": "PERSONAL RESEARCH & WRITING",
     "index.title": "One Origin. <span>Infinite Derivation.</span>",
@@ -886,6 +894,14 @@ function initContactMediaToggles() {
   });
 }
 
+function initFooter() {
+  document.querySelectorAll("[data-back-to-top]").forEach((button) => {
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+}
+
 // Initialize on page load
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initNavigation);
@@ -893,10 +909,12 @@ if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initLifePage);
   document.addEventListener("DOMContentLoaded", initSiteStats);
   document.addEventListener("DOMContentLoaded", initContactMediaToggles);
+  document.addEventListener("DOMContentLoaded", initFooter);
 } else {
   initNavigation();
   initBlogPage();
   initLifePage();
   initSiteStats();
   initContactMediaToggles();
+  initFooter();
 }
