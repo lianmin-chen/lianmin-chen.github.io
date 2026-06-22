@@ -5344,3 +5344,169 @@ h6,
 .contact-wechat-visual figcaption {
   font-family: var(--font-mono);
 }
+
+/* Final Academic status layout override. */
+.academic-status {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 380px;
+}
+
+.academic-status .academic-status-orbit {
+  flex: 0 0 auto;
+  margin-bottom: 38px;
+}
+
+.academic-status > strong {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.academic-status dl {
+  position: static;
+  width: 100%;
+  margin-top: auto;
+  padding-top: 17px;
+}
+
+@media (max-width: 520px) {
+  .academic-status {
+    min-height: 350px;
+  }
+}
+
+/* Compact contact platform cards */
+.contact-platform-grid > a {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-areas:
+    "index title arrow"
+    "description description description";
+  align-content: start;
+  align-items: center;
+  gap: 14px 18px;
+  min-height: 138px;
+  padding: 23px 24px;
+}
+
+.contact-platform-grid > a span {
+  grid-area: index;
+  margin: 0;
+}
+
+.contact-platform-grid > a strong {
+  grid-area: title;
+  margin: 0;
+  text-align: right;
+}
+
+.contact-platform-grid > a p {
+  grid-area: description;
+  max-width: none;
+  margin: 0;
+  padding-top: 14px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.contact-platform-grid > a b {
+  position: static;
+  grid-area: arrow;
+  align-self: center;
+}
+
+/* Contact primary card vector marks */
+.contact-primary-card {
+  grid-template-columns: 100px 72px minmax(0, 1fr) auto;
+  align-items: center;
+}
+
+.contact-primary-icon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  color: var(--contact-accent);
+  background:
+    radial-gradient(circle at 30% 25%, color-mix(in srgb, var(--contact-accent) 13%, transparent), transparent 62%),
+    color-mix(in srgb, var(--contact-accent) 4%, transparent);
+  border: 1px solid color-mix(in srgb, var(--contact-accent) 18%, transparent);
+  border-radius: 18px;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.contact-primary-icon::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  bottom: -7px;
+  width: 20px;
+  height: 20px;
+  border-right: 1px solid color-mix(in srgb, var(--contact-accent) 35%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--contact-accent) 35%, transparent);
+}
+
+.contact-primary-icon svg {
+  width: 34px;
+  height: 34px;
+  stroke: currentColor;
+  stroke-width: 1.65;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.contact-primary-card--red .contact-primary-icon svg {
+  fill: currentColor;
+  stroke: none;
+}
+
+.contact-primary-card:hover .contact-primary-icon {
+  background: color-mix(in srgb, var(--contact-accent) 9%, transparent);
+  transform: translateY(-3px) rotate(-2deg);
+}
+
+@media (max-width: 620px) {
+  .contact-primary-card {
+    grid-template-columns: 1fr auto;
+  }
+
+  .contact-primary-index {
+    grid-column: 1;
+  }
+
+  .contact-primary-icon {
+    grid-column: 2;
+    grid-row: 1;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+  }
+
+  .contact-primary-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .contact-primary-card > div {
+    grid-column: 1 / -1;
+  }
+
+  .contact-primary-card > b {
+    grid-column: 2;
+  }
+}
+
+[data-theme="dark"] .contact-platform-grid > a p {
+  border-top-color: rgba(255, 255, 255, 0.09);
+}
+
+@media (max-width: 520px) {
+  .contact-platform-grid > a {
+    min-height: 128px;
+    padding: 20px;
+  }
+}
