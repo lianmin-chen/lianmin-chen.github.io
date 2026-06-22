@@ -14,7 +14,7 @@
 - 🌿 生活系统: 与博客结构一致的低频记录
 - 🧾 文章详情页: Markdown 渲染 + KaTeX 数学公式支持
 - 🌓 主题与语言: 明暗主题切换 + 中英文切换
-- 🧭 页面结构: 首页、关于、学术、生活、联系
+- 🧭 页面结构: 首页、关于、学术、生活、联系、相关链接
 
 ## ✍️ 添加文章
 
@@ -53,6 +53,53 @@
 ```js
 { id: "life-single-2", title: "生活笔记", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
 ```
+
+## 🔗 添加相关链接
+
+相关链接位于 `links.html`，分为“个人站点”和“学校与机构”两个分组。
+
+### 1) 复制链接条目
+
+在对应分组的 `.links-list` 中复制一条 `.links-row`，然后修改网址、名称、说明和域名。
+
+个人站点示例:
+
+```html
+<a class="links-row" href="https://example.com/" target="_blank" rel="noopener">
+	<span class="links-index">03</span>
+	<span class="links-icon links-icon--person" aria-hidden="true"></span>
+	<span class="links-name">网站名称</span>
+	<span class="links-description" data-i18n="links.example.desc">网站简介</span>
+	<span class="links-domain">example.com</span>
+	<b>↗</b>
+</a>
+```
+
+学校或机构链接可将图标类替换为:
+
+- `links-icon--university`: 学校
+- `links-icon--college`: 学院
+- `links-icon--research`: 研究机构
+
+### 2) 更新编号与数量
+
+- 按当前顺序修改每条链接的 `.links-index`。
+- 修改对应分组标题右侧的数量。
+- 修改页面顶部 `.links-count strong` 中的链接总数。
+
+### 3) 添加中英文文案
+
+编辑 `assets/js/main.js`，分别在 `translations.zh` 和 `translations.en` 中添加同名键:
+
+```js
+// translations.zh
+"links.example.desc": "网站简介",
+
+// translations.en
+"links.example.desc": "Website description",
+```
+
+如果名称也需要中英文切换，可同样给 `.links-name` 添加 `data-i18n`。
 
 ## 📚 添加论文/项目
 
@@ -134,7 +181,7 @@ Core features:
 - 🌿 Life system: mirrored structure for personal notes
 - 🧾 Article page: Markdown rendering + KaTeX math support
 - 🌓 Theme & language: light/dark mode + zh/en switch
-- 🧭 Pages: Home, About, Academic, Life, Contact
+- 🧭 Pages: Home, About, Academic, Life, Contact, Links
 
 ## ✍️ Add Articles
 
@@ -173,6 +220,51 @@ Example (life article):
 ```js
 { id: "life-single-2", title: "Life Note", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
 ```
+
+## 🔗 Add Related Links
+
+Related links are maintained in `links.html` and grouped under Personal Sites and Universities & Institutes.
+
+### 1) Copy a link row
+
+Copy a `.links-row` inside the appropriate `.links-list`, then update its URL, name, description, and domain.
+
+```html
+<a class="links-row" href="https://example.com/" target="_blank" rel="noopener">
+	<span class="links-index">03</span>
+	<span class="links-icon links-icon--person" aria-hidden="true"></span>
+	<span class="links-name">Website Name</span>
+	<span class="links-description" data-i18n="links.example.desc">Website description</span>
+	<span class="links-domain">example.com</span>
+	<b>↗</b>
+</a>
+```
+
+Available institution icon classes:
+
+- `links-icon--university`: university
+- `links-icon--college`: school or college
+- `links-icon--research`: research institute
+
+### 2) Update numbering and counts
+
+- Update each `.links-index` according to its order.
+- Update the count displayed beside the corresponding group heading.
+- Update the total inside `.links-count strong` at the top of the page.
+
+### 3) Add bilingual text
+
+Add matching keys to both `translations.zh` and `translations.en` in `assets/js/main.js`:
+
+```js
+// translations.zh
+"links.example.desc": "网站简介",
+
+// translations.en
+"links.example.desc": "Website description",
+```
+
+Add `data-i18n` to `.links-name` as well when the website name needs translation.
 
 ## 📚 Add Papers/Projects
 
