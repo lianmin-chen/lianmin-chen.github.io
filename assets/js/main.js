@@ -736,6 +736,17 @@ function initBlogPage() {
   renderBlogContent("", "latest");
 }
 
+function initSiteStats() {
+  const stats = document.querySelector(".site-stats");
+  if (!stats) return;
+  const host = window.location.hostname;
+  const protocol = window.location.protocol;
+  const isLocal = protocol === "file:" || host === "localhost" || host === "127.0.0.1" || host === "[::1]";
+  if (isLocal) {
+    stats.style.display = "none";
+  }
+}
+
 function initFooter() {
   document.querySelectorAll("[data-back-to-top]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -748,9 +759,11 @@ function initFooter() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initNavigation);
   document.addEventListener("DOMContentLoaded", initBlogPage);
+  document.addEventListener("DOMContentLoaded", initSiteStats);
   document.addEventListener("DOMContentLoaded", initFooter);
 } else {
   initNavigation();
   initBlogPage();
+  initSiteStats();
   initFooter();
 }
