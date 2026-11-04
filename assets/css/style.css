@@ -4164,9 +4164,9 @@ h6,
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3.6;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: 50% 28%;
+  object-position: 50% 50%;
 }
 
 .home-profile-badge {
