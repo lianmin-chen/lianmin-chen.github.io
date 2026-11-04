@@ -1367,8 +1367,8 @@ button.contact-link {
 .home-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.94fr);
-  gap: clamp(42px, 7vw, 96px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(360px, 0.8fr);
+  gap: clamp(32px, 4vw, 56px);
   align-items: center;
   min-height: min(660px, calc(100vh - var(--site-header-height) - 34px));
   padding: clamp(28px, 4vw, 52px) 0 58px;
@@ -1477,6 +1477,7 @@ button.contact-link {
   position: relative;
   display: grid;
   place-items: center;
+  justify-items: start;
   min-height: 560px;
 }
 
@@ -1571,7 +1572,7 @@ button.contact-link {
 
 @media (max-width: 980px) {
   .home-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.78fr);
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
     gap: 36px;
   }
 
@@ -1612,6 +1613,7 @@ button.contact-link {
   .home-hero-visual {
     min-height: auto;
     padding: 20px 28px 40px;
+    justify-items: center;
   }
 
   .home-figure-frame {
@@ -4347,8 +4349,9 @@ h6,
 
 .home-experience-item {
   display: grid;
-  grid-template-columns: 74px minmax(0, 1fr);
-  gap: 14px;
+  grid-template-columns: 78px minmax(0, 0.85fr) minmax(0, 1.05fr);
+  gap: 12px;
+  align-items: center;
   padding: 14px 0;
   border-bottom: 1px dashed rgba(15, 23, 42, 0.09);
 }
@@ -4359,25 +4362,32 @@ h6,
 }
 
 .home-experience-item time {
-  padding-top: 2px;
   color: #8a97a8;
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.75rem;
 }
 
 .home-experience-item strong {
   display: block;
   color: #172033;
-  font-size: 0.9rem;
+  font-size: 0.94rem;
   font-weight: 600;
 }
 
-.home-experience-item small {
-  display: block;
-  margin-top: 4px;
+.home-experience-place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   color: #7b8797;
-  font-size: 0.74rem;
-  line-height: 1.5;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+.home-experience-place img {
+  flex-shrink: 0;
+  width: auto;
+  height: 24px;
+  object-fit: contain;
 }
 
 .home-profile-email {
@@ -4453,7 +4463,7 @@ h6,
 [data-theme="dark"] .home-profile-text,
 [data-theme="dark"] .home-profile-email span,
 [data-theme="dark"] .home-experience-item time,
-[data-theme="dark"] .home-experience-item small {
+[data-theme="dark"] .home-experience-place {
   color: #9aa7b8;
 }
 
@@ -4941,10 +4951,6 @@ h6,
   font-size: 0.75rem;
 }
 
-.home-experience-item small {
-  font-size: 0.8rem;
-}
-
 .home-experience-item strong {
   font-size: 0.94rem;
 }
@@ -5159,5 +5165,49 @@ h6,
 
   .footer-map-widget {
     width: min(100%, 300px);
+  }
+}
+
+/* Hero About quote */
+.home-about-quote {
+  margin: 0 0 24px;
+  max-width: 100%;
+}
+
+.home-about-quote p {
+  font-family: var(--font-serif);
+  font-size: clamp(1.15rem, 1.65vw, 1.4rem);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  color: transparent;
+  background: linear-gradient(90deg, #526074 0%, #3864b2 35%, #d91c1e 55%, #526074 80%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: homeQuoteSheen 16s ease-in-out infinite;
+}
+
+@keyframes homeQuoteSheen {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+[data-theme="dark"] .home-about-quote p {
+  background-image: linear-gradient(90deg, #b7c1d0 0%, #79a9e6 35%, #f06060 55%, #b7c1d0 80%);
+}
+
+@media (max-width: 520px) {
+  .home-about-quote {
+    margin-bottom: 18px;
+  }
+
+  .home-about-quote p {
+    font-size: 1.08rem;
   }
 }

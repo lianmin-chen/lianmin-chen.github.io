@@ -70,7 +70,7 @@ const translations = {
 
     "index.eyebrow": "个人研究与写作",
     "index.title": "始于一元，<span>衍至无极</span>",
-    "index.subtitle": "多少事，从来急；天地转，光阴迫。<br>一万年太久，只争朝夕！",
+    "index.subtitle": "多少事，从来急；天地转，光阴迫。一万年太久，只争朝夕！",
     "index.intro": "我是 Lianmin Chen，关注机器学习、大模型、强化学习与优化，在这里持续记录研究、思考与生活。",
     "index.cta.research": "探索研究",
     "index.cta.blog": "阅读文章",
@@ -273,7 +273,7 @@ const translations = {
 
     "index.eyebrow": "PERSONAL RESEARCH & WRITING",
     "index.title": "One Origin. <span>Infinite Derivation.</span>",
-    "index.subtitle": "So many deeds cry out to be done; the world rolls on, time presses.<br>Ten thousand years are too long; seize the day, seize the hour.",
+    "index.subtitle": "So many deeds cry out to be done; the world rolls on, time presses. Ten thousand years are too long; seize the day, seize the hour.",
     "index.intro": "I'm Lianmin Chen. I study machine learning, large language models, reinforcement learning, and optimization, while documenting research, ideas, and life.",
     "index.cta.research": "Explore research",
     "index.cta.blog": "Read articles",
