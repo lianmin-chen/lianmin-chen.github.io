@@ -66,6 +66,7 @@ const translations = {
     "nav.contact": "联系方式",
     "footer.note": "始于一元，衍至无极",
     "footer.top": "返回顶部",
+    "footer.map": "访客地图",
 
     "index.eyebrow": "个人研究与写作",
     "index.title": "始于一元，<span>衍至无极</span>",
@@ -268,6 +269,7 @@ const translations = {
     "nav.contact": "Contact",
     "footer.note": "From the One, Toward the Infinite",
     "footer.top": "Back to Top",
+    "footer.map": "Visitor Map",
 
     "index.eyebrow": "PERSONAL RESEARCH & WRITING",
     "index.title": "One Origin. <span>Infinite Derivation.</span>",
