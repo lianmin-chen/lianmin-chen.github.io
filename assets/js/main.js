@@ -62,16 +62,9 @@ const translations = {
     "brand.name": "元衍极",
     "brand.tagline": "始于一元，衍至无极",
     "nav.home": "首页",
-    "nav.about": "关于我",
-    "nav.blog": "博客文章",
-    "nav.academic": "学术",
-    "nav.life": "生活",
+    "nav.blog": "博客",
     "nav.contact": "联系方式",
-    "nav.links": "相关链接",
     "footer.note": "始于一元，衍至无极",
-    "footer.intro": "记录研究、写作与生活。",
-    "footer.navigate": "站点导航",
-    "footer.connect": "保持连接",
     "footer.top": "返回顶部",
 
     "index.eyebrow": "个人研究与写作",
@@ -106,6 +99,12 @@ const translations = {
     "index.map.lifeDesc": "首先，好好生活；然后认真观察。",
     "index.map.contact": "联系我",
     "index.map.contactDesc": "开放而克制的连接方式。",
+    "home.profile.role": "计算机科学 · 本科生",
+    "home.paper.heading": "精选论文",
+    "home.links.blog": "博客",
+    "home.links.blogDesc": "文章、专题与生活记录。",
+    "home.links.contact": "联系方式",
+    "home.links.contactDesc": "邮箱、GitHub、知乎与学术入口。",
     "constraints.title": "统一设计约束",
     "constraints.item1": "留白优先，装饰最小化。",
     "constraints.item2": "色彩分工：蓝=结构，红=观点。",
@@ -121,6 +120,7 @@ const translations = {
     "about.identity.school": "学校",
     "about.identity.major": "专业",
     "about.identity.status": "身份",
+    "about.identity.email": "邮箱",
     "about.pill1": "华中科技大学",
     "about.pill2": "本科生",
     "about.pill3": "计算机科学与技术",
@@ -148,7 +148,7 @@ const translations = {
 
     "blog.eyebrow": "BLOG · 知识索引",
     "blog.title": "记录思考，<br><span>持续生长。</span>",
-    "blog.subtitle": "围绕机器学习、人工智能与结构化思考，记录可以被追踪、复用和继续推演的知识。",
+    "blog.subtitle": "围绕机器学习、人工智能与结构化思考，记录可以被追踪、复用和继续推演的知识，也保留研究之外的生活观察。",
     "blog.manifesto.label": "写作原则",
     "blog.manifesto.quote": "先建立结构，再填充细节；先记录路径，再给出结论。",
     "blog.sort.label": "排序",
@@ -181,7 +181,7 @@ const translations = {
     "academic.paper.title": "论文与成果",
     "academic.paper.item1": "结构化推理框架：从假设到系统 (2025)",
     "academic.paper.item2": "认知结构的可扩展性研究 (2024)",
-    "academic.project.title": "项目列表",
+    "academic.project.title": "研究项目",
     "academic.project.intro": "把研究中的方法、工具与知识组织方式沉淀成可持续迭代的系统。",
     "academic.project.state": "研究原型 · 持续迭代",
     "academic.project.item1": "推理路径可视化工具",
@@ -206,12 +206,13 @@ const translations = {
 
     "contact.eyebrow": "CONTACT · 建立连接",
     "contact.title": "开放交流，<br><span>保持真诚。</span>",
-    "contact.subtitle": "欢迎讨论研究、技术与写作，也欢迎交换尚未成熟的想法。请选择最适合当前话题的连接方式。",
+    "contact.subtitle": "如果你对研究、文章或知识组织方式有共鸣，欢迎通过邮件、GitHub 或知乎与我联系。",
     "contact.status": "开放交流与合作",
-    "contact.email": "LianminChen@outlook.com",
+    "contact.email": "lianminchen@hust.edu.cn",
     "contact.github": "https://github.com/lianmin-chen",
     "contact.note": "常用邮箱",
     "contact.open": "公开协作",
+    "contact.zhihu": "知乎",
     "contact.media": "内容平台",
     "contact.email.desc": "学术合作、项目邀约与长期交流均可通过邮件联系。",
     "contact.github.desc": "代码、实验与文档的最新更新会同步在这里。",
@@ -234,6 +235,7 @@ const translations = {
     "contact.media.wechat.tip": "微信搜索「元衍极」或扫描右侧二维码",
 
     "links.eyebrow": "LINKS · 数字邻居",
+    "links.title.short": "相关链接",
     "links.title": "连接彼此的<br><span>知识坐标。</span>",
     "links.subtitle": "一些值得持续访问的个人站点、学校、学院与研究机构。",
     "links.count": "个相关入口",
@@ -248,24 +250,22 @@ const translations = {
     "links.hopcroft": "John Hopcroft 计算中心",
     "links.hopcroft.desc": "计算机科学研究中心",
 
+    "a11y.skip": "跳到主要内容",
     "footer.copyright": "本站内容与设计未经允许，不得以任何形式转载或用于商业目的。",
     "article.toc": "目录",
-    "article.end": "感谢阅读。愿每一次记录都让思考更清晰。"
+    "article.end": "感谢阅读。愿每一次记录都让思考更清晰。",
+    "article.copy": "复制链接",
+    "article.copied": "已复制",
+    "article.prev": "上一篇",
+    "article.next": "下一篇"
   },
   en: {
       "brand.name": "OriginX",
       "brand.tagline": "One Origin. Infinite Derivation.",
     "nav.home": "Home",
-    "nav.about": "About",
     "nav.blog": "Blog",
-    "nav.academic": "Academic",
-    "nav.life": "Life",
     "nav.contact": "Contact",
-    "nav.links": "Links",
     "footer.note": "From the One, Toward the Infinite",
-    "footer.intro": "Notes on research, writing, and life.",
-    "footer.navigate": "Navigation",
-    "footer.connect": "Stay Connected",
     "footer.top": "Back to Top",
 
     "index.eyebrow": "PERSONAL RESEARCH & WRITING",
@@ -300,6 +300,12 @@ const translations = {
     "index.map.lifeDesc": "Live well first, then observe carefully.",
     "index.map.contact": "Contact Me",
     "index.map.contactDesc": "Open yet restrained connections.",
+    "home.profile.role": "Computer Science · Undergraduate",
+    "home.paper.heading": "Selected Paper",
+    "home.links.blog": "Blog",
+    "home.links.blogDesc": "Articles, series, and life notes.",
+    "home.links.contact": "Contact",
+    "home.links.contactDesc": "Email, GitHub, Zhihu, and academic profiles.",
     "constraints.title": "Design Constraints",
     "constraints.item1": "Whitespace first, minimal decoration.",
     "constraints.item2": "Color roles: blue for structure, red for viewpoints.",
@@ -315,6 +321,7 @@ const translations = {
     "about.identity.school": "School",
     "about.identity.major": "Major",
     "about.identity.status": "Status",
+    "about.identity.email": "Email",
     "about.pill1": "Huazhong University",
     "about.pill2": "Undergraduate",
     "about.pill3": "Computer Science and Technology",
@@ -342,7 +349,7 @@ const translations = {
 
     "blog.eyebrow": "BLOG · KNOWLEDGE INDEX",
     "blog.title": "Document ideas.<br><span>Keep growing.</span>",
-    "blog.subtitle": "Notes on machine learning, artificial intelligence, and structured thinking—written to be traced, reused, and extended.",
+    "blog.subtitle": "Notes on machine learning, artificial intelligence, and structured thinking—written to be traced, reused, and extended, with life observations kept alongside.",
     "blog.manifesto.label": "WRITING PRINCIPLE",
     "blog.manifesto.quote": "Build the structure before filling in details; preserve the path before presenting the conclusion.",
     "blog.sort.label": "SORT",
@@ -400,12 +407,13 @@ const translations = {
 
     "contact.eyebrow": "CONTACT · CONNECT",
     "contact.title": "Open exchange,<br><span>genuine intent.</span>",
-    "contact.subtitle": "Conversations about research, technology, writing, and unfinished ideas are welcome. Choose the channel that best fits the topic.",
+    "contact.subtitle": "If my research, writing, or way of organizing knowledge resonates with you, reach out via email, GitHub, or Zhihu.",
     "contact.status": "OPEN FOR IDEAS & COLLABORATION",
-    "contact.email": "LianminChen@outlook.com",
+    "contact.email": "lianminchen@hust.edu.cn",
     "contact.github": "https://github.com/lianmin-chen",
     "contact.note": "Primary inbox",
     "contact.open": "Open collaboration",
+    "contact.zhihu": "Zhihu",
     "contact.media": "Content Platforms",
     "contact.email.desc": "For academic collaboration, project invitations, and long-term exchanges.",
     "contact.github.desc": "Latest code, experiments, and documentation updates are mirrored here.",
@@ -428,6 +436,7 @@ const translations = {
     "contact.media.wechat.tip": "Search “元衍极” in WeChat or scan the QR code",
 
     "links.eyebrow": "LINKS · DIGITAL NEIGHBORS",
+    "links.title.short": "Related Links",
     "links.title": "Connected through<br><span>knowledge coordinates.</span>",
     "links.subtitle": "Personal sites, universities, schools, and research institutes worth revisiting.",
     "links.count": "related destinations",
@@ -442,9 +451,14 @@ const translations = {
     "links.hopcroft": "John Hopcroft Center for Computer Science",
     "links.hopcroft.desc": "Computer science research center",
 
+    "a11y.skip": "Skip to content",
     "footer.copyright": "Content and design of this site must not be reproduced or used for commercial purposes without permission.",
     "article.toc": "Table of contents",
-    "article.end": "Thank you for reading. May every note make the thinking clearer."
+    "article.end": "Thank you for reading. May every note make the thinking clearer.",
+    "article.copy": "Copy link",
+    "article.copied": "Copied",
+    "article.prev": "Previous",
+    "article.next": "Next"
   }
 };
 
@@ -459,16 +473,6 @@ function setTheme(theme) {
   const currentLang = localStorage.getItem("lang") || "zh";
   if (themeToggle) {
     themeToggle.textContent = themeLabels[theme][currentLang];
-  }
-  // Update figure image based on theme
-  updateFigureImage(theme);
-}
-
-function updateFigureImage(theme) {
-  const figureImg = document.getElementById("figure-img");
-  if (figureImg) {
-    const filename = theme === "light" ? "light_figure3-4.png" : "dark_figure3-4.png";
-    figureImg.src = `assets/images/${filename}`;
   }
 }
 
@@ -505,8 +509,6 @@ const savedLang = localStorage.getItem("lang") || ((navigator.language || "zh").
 setTheme(savedTheme);
 setLanguage(savedLang);
 
-// Initialize figure image based on saved theme
-updateFigureImage(savedTheme);
 // ========== Blog System ==========
 // Blog data structure
 const blogData = {
@@ -518,39 +520,12 @@ const blogData = {
       date: "2026-02-14",
       articles: [
         { id: "article-1", title: "定义最小假设", date: "2026-02-14", path: "blog/topics/topic-1/article-1.md" },
-        { id: "article-2", title: "识别不变量", date: "2026-02-13", path: "blog/topics/topic-1/article-2.md" },
-        { id: "article-3", title: "构建推理框架", date: "2026-02-12", path: "blog/topics/topic-1/article-3.md" }
-      ]
-    },
-    {
-      id: "topic-2",
-      title: "推理系统设计",
-      description: "从推理方法到完整系统的构建",
-      date: "2026-02-10",
-      articles: [
-        { id: "article-4", title: "推理可复现性", date: "2026-02-10" },
-        { id: "article-5", title: "系统扩展性", date: "2026-02-09" }
-      ]
-    },
-    {
-      id: "topic-3",
-      title: "复杂问题拆解",
-      description: "实用的拆解方法和工具",
-      date: "2026-02-05",
-      articles: [
-        { id: "article-6", title: "边界识别", date: "2026-02-05" },
-        { id: "article-7", title: "变量设计", date: "2026-02-04" }
+        { id: "article-2", title: "识别不变量", date: "2026-02-13", path: "blog/topics/topic-1/article-2.md" }
       ]
     }
   ],
   articles: [
-    { id: "single-toc", title: "目录测试文章", date: "2026-02-15", category: "Test", path: "blog/articles/toc-test.md" },
-    { id: "single-test", title: "Markdown 语法测试文章", date: "2026-02-15", category: "Test", path: "blog/articles/test.md" },
-    { id: "single-1", title: "机器学习最新进展", date: "2026-02-11", category: "ML", path: "./blog/articles/single-1.md" },
-    { id: "single-2", title: "大模型微调最佳实践", date: "2026-02-08", category: "LLM", path: "blog/articles/single-2.md" },
-    { id: "single-3", title: "强化学习基础回顾", date: "2026-02-03", category: "RL", path: "blog/articles/single-3.md" },
-    { id: "single-4", title: "零阶优化算法浅析", date: "2026-01-28", category: "Optimization", path: "blog/articles/single-4.md" },
-    { id: "single-5", title: "测试文章", date: "2026-03-28", category: "Test", path: "blog/articles/single-5.md" }
+    { id: "single-test", title: "Markdown 语法测试文章", date: "2026-02-15", category: "Test", path: "blog/articles/test.md" }
   ]
 };
 
@@ -562,8 +537,7 @@ const lifeData = {
       description: "低频但完整的结构性回顾",
       date: "2026-02-10",
       articles: [
-        { id: "life-article-1", title: "在安静里复盘一周的结构性问题", date: "2026-02-14", path: "life-articles/week-review.md" },
-        { id: "life-article-2", title: "把复杂问题写成可以分享的日常", date: "2026-01-28", path: "life-articles/daily-notes.md" }
+        { id: "life-article-1", title: "在安静里复盘一周的结构性问题", date: "2026-02-14", path: "life-articles/week-review.md" }
       ]
     }
   ],
@@ -576,13 +550,16 @@ const lifeData = {
 function renderBlogContent(searchTerm = "", sortBy = "latest") {
   const searchLower = searchTerm.toLowerCase();
   
-  // Filter and sort
-  let filteredTopics = blogData.topics.filter(t => 
-    t.title.toLowerCase().includes(searchLower) || 
+  // Filter and sort (blog topics and life topics share one list)
+  const topics = [...blogData.topics, ...lifeData.topics];
+  const articles = [...blogData.articles, ...lifeData.articles];
+
+  let filteredTopics = topics.filter(t =>
+    t.title.toLowerCase().includes(searchLower) ||
     t.articles.some(a => a.title.toLowerCase().includes(searchLower))
   );
-  
-  let filteredArticles = blogData.articles.filter(a =>
+
+  let filteredArticles = articles.filter(a =>
     a.title.toLowerCase().includes(searchLower)
   );
   
@@ -651,72 +628,6 @@ function renderArticles(articles) {
   `).join("");
 }
 
-function renderLifeContent(searchTerm = "", sortBy = "latest") {
-  const searchLower = searchTerm.toLowerCase();
-
-  let filteredTopics = lifeData.topics.filter(t =>
-    t.title.toLowerCase().includes(searchLower) ||
-    t.articles.some(a => a.title.toLowerCase().includes(searchLower))
-  );
-
-  let filteredArticles = lifeData.articles.filter(a =>
-    a.title.toLowerCase().includes(searchLower)
-  );
-
-  const sortFn = (a, b) => {
-    if (sortBy === "latest") {
-      return new Date(b.date) - new Date(a.date);
-    }
-    return new Date(a.date) - new Date(b.date);
-  };
-
-  filteredTopics.sort(sortFn);
-  filteredArticles.sort(sortFn);
-
-  renderLifeTopics(filteredTopics);
-  renderLifeArticles(filteredArticles);
-}
-
-function renderLifeTopics(topics) {
-  const container = document.getElementById("life-topics-container");
-  if (!container) return;
-
-  container.innerHTML = topics.map((topic, index) => `
-    <article class="life-topic-card reveal">
-      <button class="life-topic-trigger" type="button" onclick="toggleTopic('${topic.id}', this)" aria-expanded="false">
-        <span class="life-topic-index">${String(index + 1).padStart(2, "0")}</span>
-        <span class="life-topic-copy">
-          <span>SLOW SERIES</span>
-          <strong>${topic.title}</strong>
-        </span>
-        <span class="life-topic-toggle topic-toggle" aria-hidden="true">＋</span>
-      </button>
-      <p class="life-topic-desc">${topic.description}</p>
-      <div class="life-topic-meta"><span>${topic.articles.length} 篇札记</span><time>${topic.date}</time></div>
-      <div class="life-topic-articles topic-articles" id="articles-${topic.id}">
-        ${topic.articles.map(article => `
-          <button class="life-topic-article" type="button" onclick="openLifeArticle('${article.id}')">
-            <span>${article.title}</span><time>${article.date}</time><span aria-hidden="true">↗</span>
-          </button>
-        `).join("")}
-      </div>
-    </article>
-  `).join("");
-}
-
-function renderLifeArticles(articles) {
-  const container = document.getElementById("life-articles-container");
-  if (!container) return;
-
-  container.innerHTML = articles.map((article, index) => `
-    <button class="life-note-row reveal" type="button" onclick="openLifeArticle('${article.id}')">
-      <span class="life-note-number">${String(index + 1).padStart(2, "0")}</span>
-      <span class="life-note-copy"><small>${article.category || "LIFE"}</small><strong>${article.title}</strong></span>
-      <time>${article.date}</time><span class="life-note-arrow" aria-hidden="true">↗</span>
-    </button>
-  `).join("");
-}
-
 function toggleTopic(topicId, trigger) {
   const container = document.getElementById(`articles-${topicId}`);
   if (container) {
@@ -736,12 +647,11 @@ function toggleTopic(topicId, trigger) {
 }
 
 function openArticle(articleId) {
-  // Find article path from blog data
   let articlePath = null;
   let articleDate = null;
   let articleCategory = null;
-  
-  // Search in topics
+  let source = "blog";
+
   for (const topic of blogData.topics) {
     const article = topic.articles.find(a => a.id === articleId);
     if (article) {
@@ -751,8 +661,7 @@ function openArticle(articleId) {
       break;
     }
   }
-  
-  // Search in standalone articles
+
   if (!articlePath) {
     const article = blogData.articles.find(a => a.id === articleId);
     if (article) {
@@ -761,32 +670,17 @@ function openArticle(articleId) {
       articleCategory = article.category;
     }
   }
-  
-  // Navigate to article page
-  if (articlePath) {
-    const params = new URLSearchParams();
-    params.set("path", articlePath);
-    params.set("source", "blog");
-    if (articleDate) params.set("date", articleDate);
-    if (articleCategory) params.set("category", articleCategory);
-    window.location.href = `article.html?${params.toString()}`;
-  } else {
-    console.error("Article not found: " + articleId);
-  }
-}
 
-function openLifeArticle(articleId) {
-  let articlePath = null;
-  let articleDate = null;
-  let articleCategory = null;
-
-  for (const topic of lifeData.topics) {
-    const article = topic.articles.find(a => a.id === articleId);
-    if (article) {
-      articlePath = article.path;
-      articleDate = article.date;
-      articleCategory = topic.title;
-      break;
+  if (!articlePath) {
+    for (const topic of lifeData.topics) {
+      const article = topic.articles.find(a => a.id === articleId);
+      if (article) {
+        articlePath = article.path;
+        articleDate = article.date;
+        articleCategory = topic.title;
+        source = "life";
+        break;
+      }
     }
   }
 
@@ -796,27 +690,26 @@ function openLifeArticle(articleId) {
       articlePath = article.path;
       articleDate = article.date;
       articleCategory = article.category || "生活";
+      source = "life";
     }
   }
 
   if (articlePath) {
     const params = new URLSearchParams();
     params.set("path", articlePath);
-    params.set("source", "life");
+    params.set("source", source);
     if (articleDate) params.set("date", articleDate);
     if (articleCategory) params.set("category", articleCategory);
     window.location.href = `article.html?${params.toString()}`;
   } else {
-    console.error("Life article not found: " + articleId);
+    console.error("Article not found: " + articleId);
   }
 }
 
 // Initialize blog page
 function initBlogPage() {
-  // Check if we're on blog page
   if (!document.getElementById("topics-container")) return;
-  
-  // Set up search
+
   const searchInput = document.getElementById("blog-search");
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
@@ -825,73 +718,18 @@ function initBlogPage() {
       renderBlogContent(e.target.value, sortBy);
     });
   }
-  
-  // Set up sort buttons
+
   const sortBtns = document.querySelectorAll(".sort-btn");
   sortBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
       sortBtns.forEach(b => b.classList.remove("active"));
       e.target.classList.add("active");
-      const searchInput = document.getElementById("blog-search");
       const searchTerm = searchInput ? searchInput.value : "";
       renderBlogContent(searchTerm, e.target.dataset.sort);
     });
   });
-  
-  // Initial render
+
   renderBlogContent("", "latest");
-}
-
-function initLifePage() {
-  if (!document.getElementById("life-topics-container")) return;
-
-  const searchInput = document.getElementById("life-search");
-  const controls = document.querySelector(".life-controls");
-  const sortBtns = controls ? controls.querySelectorAll(".sort-btn") : [];
-
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const activeBtn = controls ? controls.querySelector(".sort-btn.active") : null;
-      const sortBy = activeBtn ? activeBtn.dataset.sort : "latest";
-      renderLifeContent(e.target.value, sortBy);
-    });
-  }
-
-  sortBtns.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      sortBtns.forEach(b => b.classList.remove("active"));
-      e.target.classList.add("active");
-      const searchTerm = searchInput ? searchInput.value : "";
-      renderLifeContent(searchTerm, e.target.dataset.sort);
-    });
-  });
-
-  renderLifeContent("", "latest");
-}
-
-function initSiteStats() {
-  const stats = document.querySelector(".site-stats");
-  if (!stats) return;
-  const host = window.location.hostname;
-  const protocol = window.location.protocol;
-  const isLocal = protocol === "file:" || host === "localhost" || host === "127.0.0.1" || host === "[::1]";
-  if (isLocal) {
-    stats.style.display = "none";
-  }
-}
-
-function initContactMediaToggles() {
-  const toggles = document.querySelectorAll("[data-toggle-target]");
-  if (!toggles.length) return;
-  toggles.forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const targetId = toggle.getAttribute("data-toggle-target");
-      const target = targetId ? document.getElementById(targetId) : null;
-      if (!target) return;
-      const isVisible = target.classList.toggle("is-visible");
-      toggle.setAttribute("aria-expanded", isVisible ? "true" : "false");
-    });
-  });
 }
 
 function initFooter() {
@@ -906,15 +744,9 @@ function initFooter() {
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initNavigation);
   document.addEventListener("DOMContentLoaded", initBlogPage);
-  document.addEventListener("DOMContentLoaded", initLifePage);
-  document.addEventListener("DOMContentLoaded", initSiteStats);
-  document.addEventListener("DOMContentLoaded", initContactMediaToggles);
   document.addEventListener("DOMContentLoaded", initFooter);
 } else {
   initNavigation();
   initBlogPage();
-  initLifePage();
-  initSiteStats();
-  initContactMediaToggles();
   initFooter();
 }

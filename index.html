@@ -4,30 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 始于一元，衍至无极</title>
-  <meta name="description" content="Lianmin Chen 的个人研究与写作网站，记录机器学习研究、技术思考与生活观察。" />
+  <meta name="description" content="Lianmin Chen 的个人研究与写作网站，记录机器学习研究、学术成果、技术思考与生活观察。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="元衍极 | 始于一元，衍至无极" />
+  <meta property="og:description" content="Lianmin Chen 的个人研究与写作网站，记录机器学习研究、学术成果、技术思考与生活观察。" />
+  <meta property="og:url" content="https://lianmin-chen.github.io/" />
+  <meta property="og:image" content="https://lianmin-chen.github.io/assets/images/share-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="元衍极 | 始于一元，衍至无极" />
+  <meta name="twitter:description" content="Lianmin Chen 的个人研究与写作网站，记录机器学习研究、学术成果、技术思考与生活观察。" />
+  <meta name="twitter:image" content="https://lianmin-chen.github.io/assets/images/share-cover.jpg" />
+  <meta name="theme-color" content="#f8f9fb" />
+  <link rel="canonical" href="https://lianmin-chen.github.io/" />
+  <link rel="alternate" type="application/rss+xml" title="元衍极" href="https://lianmin-chen.github.io/feed.xml" />
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body class="home-page">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">跳到主要内容</a>
   <div class="page">
     <header class="site-header container">
       <div class="brand">
-        <a class="logo" href="index.html" aria-label="元衍极">
-          <img src="assets/images/logo.svg" alt="元衍极" />
+        <a class="logo logo--wordmark" href="index.html" aria-label="元衍极">
+          <picture>
+            <source srcset="assets/images/white-logo.webp" type="image/webp" />
+            <img src="assets/images/white-logo.png" alt="" />
+          </picture>
         </a>
-        <div class="brand-text">
-          <h1 data-i18n="brand.name">元衍极</h1>
-          <p class="tagline" data-i18n="brand.tagline">始于一元，衍至无极</p>
-        </div>
+        <h1 class="visually-hidden" data-i18n="brand.name">元衍极</h1>
       </div>
       <nav class="nav" aria-label="Primary">
-        <a href="index.html" class="active" data-i18n="nav.home">首页</a>
-        <a href="about.html" data-i18n="nav.about">关于我</a>
-        <a href="blog.html" data-i18n="nav.blog">博客文章</a>
-        <a href="academic.html" data-i18n="nav.academic">学术</a>
-        <a href="life.html" data-i18n="nav.life">生活</a>
+        <a href="index.html" class="active" aria-current="page" data-i18n="nav.home">首页</a>
+        <a href="blog.html" data-i18n="nav.blog">博客</a>
         <a href="contact.html" data-i18n="nav.contact">联系方式</a>
-        <a href="links.html" data-i18n="nav.links">相关链接</a>
       </nav>
       <div class="header-actions">
         <button class="toggle" id="theme-toggle" aria-label="Toggle theme">日</button>
@@ -38,119 +47,159 @@
       </div>
     </header>
 
-    <main class="main container">
+    <main class="main container" id="main-content">
+      <!-- ===== 首屏：简介 + 个人名片 ===== -->
       <section class="home-hero" id="home">
-        <div class="home-hero-content reveal">
-          <div class="home-wordmark" aria-hidden="true">
-            <img src="assets/images/white-logo.png" alt="" />
-          </div>
-          <p class="home-hero-poem" data-i18n="index.subtitle">
-            多少事，从来急；天地转，光阴迫。<br />
-            一万年太久，只争朝夕！
+        <div class="home-hero-content home-about-hero reveal">
+          <p class="home-hero-kicker" data-i18n="about.eyebrow">ABOUT · 个人档案</p>
+          <h2 class="home-about-title" data-i18n="index.map.about">关于我</h2>
+          <p class="home-about-lead" data-i18n="about.profile.lead">保持好奇，认真研究，也认真生活。</p>
+          <p class="home-about-text" data-i18n="about.profile.desc">
+            你好呀！欢迎访问我的个人网站，我是 Lianmin Chen，一个来自华中科技大学计算机科学与技术学院的本科生。我的研究兴趣主要聚焦在机器学习领域，包括大模型、强化学习、零阶优化等方向。欢迎和我交流哇~
           </p>
-          <p class="home-hero-intro" data-i18n="index.intro">
-            我是 Lianmin Chen，关注机器学习、大模型、强化学习与优化，在这里持续记录研究、思考与生活。
-          </p>
-          <div class="home-hero-actions">
-            <a class="home-button home-button--primary" href="academic.html" data-i18n="index.cta.research">探索研究</a>
-            <a class="home-button home-button--secondary" href="blog.html" data-i18n="index.cta.blog">阅读文章</a>
+          <a class="home-profile-email" href="mailto:lianminchen@hust.edu.cn">
+            <span data-i18n="about.identity.email">邮箱</span>
+            lianminchen@hust.edu.cn
+          </a>
+          <div class="home-about-experience">
+            <p class="section-eyebrow">EXPERIENCE</p>
+            <div class="home-experience">
+              <div class="home-experience-item">
+                <time>2025</time>
+                <div>
+                  <strong>华为武汉研究所</strong>
+                  <small><span data-i18n="about.experience.internship">暑期实习</span> · Wuhan, China</small>
+                </div>
+              </div>
+              <div class="home-experience-item">
+                <time>2022—</time>
+                <div>
+                  <strong>华中科技大学</strong>
+                  <small><span data-i18n="about.pill3">计算机科学与技术</span> · Wuhan, China</small>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="home-hero-visual reveal delay-1">
           <div class="home-orbit home-orbit--blue" aria-hidden="true"></div>
           <div class="home-orbit home-orbit--red" aria-hidden="true"></div>
-          <div class="home-figure-frame">
-            <img
-              id="figure-img"
-              class="home-figure-img"
-              src="assets/images/light_figure3-4.png"
-              alt="元衍极个人角色形象"
-            />
-          </div>
-          <div class="home-figure-note">
-            <span class="home-figure-dot" aria-hidden="true"></span>
-            <span data-i18n="index.figure.note">观察 · 理解 · 洞察</span>
-          </div>
+          <aside class="home-profile-card">
+            <div class="home-profile-media">
+              <picture>
+                <source srcset="assets/images/avatar.webp" type="image/webp" />
+                <img
+                  class="home-profile-img"
+                  src="assets/images/avatar.jpg"
+                  width="900"
+                  height="900"
+                  alt="Lianmin Chen 的头像"
+                  decoding="async"
+                />
+              </picture>
+              <span class="home-profile-badge">PROFILE / 01</span>
+            </div>
+            <div class="home-profile-body">
+              <div class="home-profile-head">
+                <div>
+                  <strong class="home-profile-name">Lianmin Chen</strong>
+                  <small class="home-profile-role" data-i18n="home.profile.role">计算机科学 · 本科生</small>
+                </div>
+                <span class="home-profile-status" data-i18n="about.status">学习中 · 探索中</span>
+              </div>
+              <dl class="home-profile-meta">
+                <div>
+                  <dt data-i18n="about.identity.school">学校</dt>
+                  <dd data-i18n="about.pill1">华中科技大学</dd>
+                </div>
+                <div>
+                  <dt data-i18n="about.identity.major">专业</dt>
+                  <dd data-i18n="about.pill3">计算机科学与技术</dd>
+                </div>
+              </dl>
+              <div class="home-profile-tags" aria-hidden="true">
+                <span>LLM</span><span>RL</span><span>Optimization</span>
+              </div>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <section class="home-sections section">
+      <!-- ===== 学术研究 ===== -->
+      <section class="home-research section" id="research">
         <div class="home-section-heading">
           <div>
-            <p class="section-eyebrow" data-i18n="index.map.eyebrow">EXPLORE</p>
-            <h3 data-i18n="index.map.title">从这里继续探索</h3>
+            <p class="section-eyebrow">SELECTED WORK</p>
+            <h3 data-i18n="home.paper.heading">精选论文</h3>
           </div>
-          <p class="home-section-note" data-i18n="index.map.note">研究、写作与生活，共同构成持续生长的知识系统。</p>
+          <p class="home-section-note" data-i18n="academic.idea.desc">以可复现、可引用、可扩展为最低标准，持续累积可被检验的成果。</p>
         </div>
-        <div class="home-card-grid">
-          <a class="home-card home-card--research" href="academic.html">
-            <div class="home-card-topline">
-              <span class="home-card-index">01</span>
-              <span class="home-card-type">RESEARCH</span>
+
+        <article class="academic-paper reveal">
+          <div class="academic-paper-index">01</div>
+          <div class="academic-paper-main">
+            <div class="academic-paper-venue">
+              <span>NeurIPS 2026 · Poster</span>
+              <time>2026.11</time>
             </div>
-            <span class="home-card-symbol" aria-hidden="true">
-              <span></span>
-            </span>
-            <div class="home-card-content">
-              <div class="home-card-title" data-i18n="index.map.academic">学术研究</div>
-              <p class="desc" data-i18n="index.map.academicDesc">论文、项目与可被检验的研究成果。</p>
-              <div class="home-card-tags" aria-hidden="true">
-                <span>Papers</span><span>Projects</span>
+            <h4>The Cost of Mismatch: Noise Amplification in Zeroth-Order Reinforcement Learning</h4>
+            <p class="academic-paper-authors"><strong>Lianmin Chen</strong>, Junbin Qiu, Chenxing Wei, Yao Shu, Kun He</p>
+            <div class="academic-paper-footer">
+              <div class="academic-paper-tags">
+                <span>Zeroth-Order Optimization</span>
+                <span>Reinforcement Learning</span>
+                <span>arXiv:2611.03260</span>
+              </div>
+              <div class="academic-paper-actions">
+                <a href="https://arxiv.org/abs/2611.03260" target="_blank" rel="noopener">arXiv <span>↗</span></a>
+                <a href="https://arxiv.org/pdf/2611.03260" target="_blank" rel="noopener">PDF <span>↓</span></a>
               </div>
             </div>
-            <span class="home-card-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="home-card home-card--writing" href="blog.html">
-            <div class="home-card-topline">
-              <span class="home-card-index">02</span>
-              <span class="home-card-type">WRITING</span>
+          </div>
+        </article>
+
+        <article class="academic-paper reveal delay-1">
+          <div class="academic-paper-index">02</div>
+          <div class="academic-paper-main">
+            <div class="academic-paper-venue">
+              <span>NeurIPS Workshop · UrbanAI 2025</span>
+              <time>2025.12</time>
             </div>
-            <span class="home-card-symbol" aria-hidden="true">
-              <span></span>
-            </span>
-            <div class="home-card-content">
-              <div class="home-card-title" data-i18n="index.map.blog">技术博客</div>
-              <p class="desc" data-i18n="index.map.blogDesc">记录清晰、可追踪的学习与推理路径。</p>
-              <div class="home-card-tags" aria-hidden="true">
-                <span>ML</span><span>LLM</span><span>Notes</span>
+            <h4>HeLoFusion: An Efficient and Scalable Encoder for Modeling Heterogeneous and Multi-Scale Interactions in Trajectory Prediction</h4>
+            <p class="academic-paper-authors">Bingqing Wei, <strong>Lianmin Chen</strong>, Zhongyu Xia, Yongtao Wang</p>
+            <div class="academic-paper-footer">
+              <div class="academic-paper-tags">
+                <span>Trajectory Prediction</span>
+                <span>Multi-agent Interaction</span>
+                <span>arXiv:2509.11719</span>
+              </div>
+              <div class="academic-paper-actions">
+                <a href="https://arxiv.org/abs/2509.11719" target="_blank" rel="noopener">arXiv <span>↗</span></a>
+                <a href="https://arxiv.org/pdf/2509.11719" target="_blank" rel="noopener">PDF <span>↓</span></a>
               </div>
             </div>
-            <span class="home-card-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="home-card home-card--life" href="life.html">
-            <div class="home-card-topline">
-              <span class="home-card-index">03</span>
-              <span class="home-card-type">LIFE</span>
-            </div>
-            <span class="home-card-symbol" aria-hidden="true">
-              <span></span>
+          </div>
+        </article>
+      </section>
+
+      <section class="home-explore-links section" aria-label="More">
+        <div class="home-explore-grid">
+          <a class="home-explore-card reveal" href="blog.html">
+            <span class="home-explore-index">01 / BLOG</span>
+            <span class="home-explore-copy">
+              <strong data-i18n="home.links.blog">博客</strong>
+              <small data-i18n="home.links.blogDesc">文章、专题与生活记录。</small>
             </span>
-            <div class="home-card-content">
-              <div class="home-card-title" data-i18n="index.map.life">生活札记</div>
-              <p class="desc" data-i18n="index.map.lifeDesc">首先，好好生活；然后认真观察。</p>
-              <div class="home-card-tags" aria-hidden="true">
-                <span>Review</span><span>Daily</span>
-              </div>
-            </div>
-            <span class="home-card-arrow" aria-hidden="true">↗</span>
+            <span class="home-explore-arrow" aria-hidden="true">→</span>
           </a>
-        </div>
-        <div class="home-secondary-links">
-          <a class="home-secondary-link" href="about.html">
-            <span class="home-secondary-index">04</span>
-            <span class="home-secondary-copy">
-              <strong data-i18n="index.map.about">关于我</strong>
-              <small data-i18n="index.map.aboutDesc">一个学生</small>
+          <a class="home-explore-card home-explore-card--red reveal delay-1" href="contact.html">
+            <span class="home-explore-index">02 / CONTACT</span>
+            <span class="home-explore-copy">
+              <strong data-i18n="home.links.contact">联系方式</strong>
+              <small data-i18n="home.links.contactDesc">邮箱、GitHub、知乎与学术入口。</small>
             </span>
-            <span class="home-secondary-arrow" aria-hidden="true">→</span>
-          </a>
-          <a class="home-secondary-link" href="contact.html">
-            <span class="home-secondary-index">05</span>
-            <span class="home-secondary-copy">
-              <strong data-i18n="index.map.contact">联系我</strong>
-              <small data-i18n="index.map.contactDesc">开放而克制的连接方式。</small>
-            </span>
-            <span class="home-secondary-arrow" aria-hidden="true">→</span>
+            <span class="home-explore-arrow" aria-hidden="true">→</span>
           </a>
         </div>
       </section>
@@ -161,23 +210,19 @@
       <div class="footer-inner container">
         <div class="footer-brand">
           <a class="footer-logo" href="index.html"><img src="assets/images/logo.svg" alt="" /><span data-i18n="brand.name">元衍极</span></a>
-          <p data-i18n="footer.intro">记录研究、写作与生活，也连接持续生长的知识世界。</p>
+          
         </div>
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <p data-i18n="footer.navigate">站点导航</p>
-          <div><a href="about.html" data-i18n="nav.about">关于我</a><a href="blog.html" data-i18n="nav.blog">博客文章</a><a href="academic.html" data-i18n="nav.academic">学术</a><a href="life.html" data-i18n="nav.life">生活</a><a href="links.html" data-i18n="nav.links">相关链接</a></div>
-        </nav>
+        <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html" data-i18n="nav.home">首页</a><a href="blog.html" data-i18n="nav.blog">博客</a><a href="contact.html" data-i18n="nav.contact">联系方式</a></nav>
         <button class="footer-top" type="button" data-back-to-top><span data-i18n="footer.top">返回顶部</span><b>↑</b></button>
       </div>
       <div class="footer-bottom container">
         <p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p>
         <p class="footer-copyright" data-i18n="footer.copyright">本站内容与设计未经允许，不得以任何形式转载或用于商业目的。</p>
-        <div class="site-stats" aria-label="Site statistics"><span id="busuanzi_container_site_pv">总访问量 <span id="busuanzi_value_site_pv"></span></span><span id="busuanzi_container_site_uv">访客数 <span id="busuanzi_value_site_uv"></span></span></div>
+        
       </div>
     </footer>
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
 </html>

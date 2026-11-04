@@ -4,35 +4,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>元衍极 | 文章</title>
+  <meta name="description" content="元衍极的文章：记录研究、思考与生活。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="元衍极 | 文章" />
+  <meta property="og:description" content="元衍极的文章：记录研究、思考与生活。" />
+  <meta property="og:url" content="https://lianmin-chen.github.io/article.html" />
+  <meta property="og:image" content="https://lianmin-chen.github.io/assets/images/share-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="元衍极 | 文章" />
+  <meta name="twitter:description" content="元衍极的文章：记录研究、思考与生活。" />
+  <meta name="twitter:image" content="https://lianmin-chen.github.io/assets/images/share-cover.jpg" />
+  <meta name="theme-color" content="#fbfcfe" />
+  <link rel="canonical" href="https://lianmin-chen.github.io/article.html" />
+  <link rel="alternate" type="application/rss+xml" title="元衍极" href="https://lianmin-chen.github.io/feed.xml" />
   <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/article.css?v=20260622" />
+  <link rel="stylesheet" href="assets/css/article.css?v=20261104" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked@11.1.1/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.6/dist/purify.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
 </head>
 <body class="article-site-page">
+  <a class="skip-link" href="#main-content" data-i18n="a11y.skip">跳到主要内容</a>
   <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
   <div class="page">
     <header class="site-header container">
       <div class="brand">
-        <a class="logo" href="index.html" aria-label="元衍极">
-          <img src="assets/images/logo.svg" alt="元衍极" />
+        <a class="logo logo--wordmark" href="index.html" aria-label="元衍极">
+          <picture>
+            <source srcset="assets/images/white-logo.webp" type="image/webp" />
+            <img src="assets/images/white-logo.png" alt="" />
+          </picture>
         </a>
-        <div class="brand-text">
-          <h1 data-i18n="brand.name">元衍极</h1>
-          <p class="tagline" data-i18n="brand.tagline">始于一元，衍至无极</p>
-        </div>
+        <h1 class="visually-hidden" data-i18n="brand.name">元衍极</h1>
       </div>
       <nav class="nav" aria-label="Primary">
         <a href="index.html" data-i18n="nav.home">首页</a>
-        <a href="about.html" data-i18n="nav.about">关于我</a>
-        <a href="blog.html" class="active" data-i18n="nav.blog">博客文章</a>
-        <a href="academic.html" data-i18n="nav.academic">学术</a>
-        <a href="life.html" data-i18n="nav.life">生活</a>
+        <a href="blog.html" class="active" aria-current="page" data-i18n="nav.blog">博客</a>
         <a href="contact.html" data-i18n="nav.contact">联系方式</a>
-        <a href="links.html" data-i18n="nav.links">相关链接</a>
       </nav>
       <div class="header-actions">
         <button class="toggle" id="theme-toggle" aria-label="Toggle theme">日</button>
@@ -43,7 +53,7 @@
       </div>
     </header>
 
-    <main class="main container article-main">
+    <main class="main container article-main" id="main-content">
       <div class="article-layout">
         <article class="article-page">
           <div class="article-header">
@@ -53,6 +63,7 @@
             <div class="article-meta">
               <span id="article-date">--</span>
               <span id="article-category">--</span>
+              <button class="article-copy-link" id="article-copy-link" type="button" data-i18n="article.copy">复制链接</button>
             </div>
           </div>
           <details class="toc-mobile" open>
@@ -62,6 +73,17 @@
           <div id="article-content" class="article-content">
             <p>加载中...</p>
           </div>
+          <nav class="article-nav" id="article-nav" aria-label="Article navigation">
+            <a class="article-nav-link article-nav-prev" id="article-prev" hidden>
+              <span data-i18n="article.prev">上一篇</span>
+              <strong></strong>
+            </a>
+            <a class="article-nav-link article-nav-next" id="article-next" hidden>
+              <span data-i18n="article.next">下一篇</span>
+              <strong></strong>
+            </a>
+          </nav>
+
           <footer class="article-end">
             <img src="assets/images/logo.svg" alt="" aria-hidden="true" />
             <div><span>END OF ARTICLE</span><p data-i18n="article.end">感谢阅读。愿每一次记录都让思考更清晰。</p></div>
@@ -76,8 +98,8 @@
 
     <footer class="site-footer">
       <div class="footer-inner container">
-        <div class="footer-brand"><a class="footer-logo" href="index.html"><img src="assets/images/logo.svg" alt="" /><span data-i18n="brand.name">元衍极</span></a><p data-i18n="footer.intro">记录研究、写作与生活，也连接持续生长的知识世界。</p></div>
-        <nav class="footer-nav" aria-label="Footer navigation"><p data-i18n="footer.navigate">站点导航</p><div><a href="about.html" data-i18n="nav.about">关于我</a><a href="blog.html" data-i18n="nav.blog">博客文章</a><a href="academic.html" data-i18n="nav.academic">学术</a><a href="life.html" data-i18n="nav.life">生活</a><a href="links.html" data-i18n="nav.links">相关链接</a></div></nav>
+        <div class="footer-brand"><a class="footer-logo" href="index.html"><img src="assets/images/logo.svg" alt="" /><span data-i18n="brand.name">元衍极</span></a></div>
+        <nav class="footer-nav" aria-label="Footer navigation"><a href="index.html" data-i18n="nav.home">首页</a><a href="blog.html" data-i18n="nav.blog">博客</a><a href="contact.html" data-i18n="nav.contact">联系方式</a></nav>
         <button class="footer-top" type="button" data-back-to-top><span data-i18n="footer.top">返回顶部</span><b>↑</b></button>
       </div>
       <div class="footer-bottom container"><p>© 2026 <span data-i18n="brand.name">元衍极</span> · <span data-i18n="footer.note">始于一元，衍至无极</span></p><p class="footer-copyright" data-i18n="footer.copyright">本站内容与设计未经允许，不得以任何形式转载或用于商业目的。</p></div>
@@ -85,6 +107,6 @@
   </div>
 
   <script src="assets/js/main.js"></script>
-  <script src="assets/js/article.js?v=20260215"></script>
+  <script src="assets/js/article.js?v=20261104"></script>
 </body>
 </html>

@@ -58,6 +58,122 @@ function configureMarked() {
 // Initialize marked with KaTeX support
 configureMarked();
 
+// Build a unified, newest-first article index for previous/next navigation
+function getAllArticles() {
+  const items = [];
+
+  blogData.topics.forEach((topic) => {
+    topic.articles.forEach((article) => {
+      items.push({ ...article, category: topic.title, source: "blog" });
+    });
+  });
+  blogData.articles.forEach((article) => {
+    items.push({ ...article, category: article.category, source: "blog" });
+  });
+  lifeData.topics.forEach((topic) => {
+    topic.articles.forEach((article) => {
+      items.push({ ...article, category: topic.title, source: "life" });
+    });
+  });
+  lifeData.articles.forEach((article) => {
+    items.push({ ...article, category: article.category || "生活", source: "life" });
+  });
+
+  return items.sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+function buildArticleHref(article) {
+  const params = new URLSearchParams();
+  params.set("path", article.path);
+  params.set("source", article.source);
+  if (article.date) params.set("date", article.date);
+  if (article.category) params.set("category", article.category);
+  return `article.html?${params.toString()}`;
+}
+
+function setupArticleNav(articlePath) {
+  const currentPath = (articlePath || "").replace(/^\.\//, "");
+  const all = getAllArticles();
+  const index = all.findIndex((article) => article.path.replace(/^\.\//, "") === currentPath);
+  if (index < 0) return;
+
+  const prev = all[index - 1];
+  const next = all[index + 1];
+  const prevEl = document.getElementById("article-prev");
+  const nextEl = document.getElementById("article-next");
+
+  if (prevEl && prev) {
+    prevEl.href = buildArticleHref(prev);
+    prevEl.querySelector("strong").textContent = prev.title;
+    prevEl.hidden = false;
+  }
+
+  if (nextEl && next) {
+    nextEl.href = buildArticleHref(next);
+    nextEl.querySelector("strong").textContent = next.title;
+    nextEl.hidden = false;
+  }
+}
+
+function setupCopyLink() {
+  const button = document.getElementById("article-copy-link");
+  if (!button) return;
+
+  button.addEventListener("click", async () => {
+    const lang = localStorage.getItem("lang") || "zh";
+    const dict = translations[lang] || translations.zh;
+    const copiedText = dict["article.copied"] || "已复制";
+    const defaultText = dict["article.copy"] || "复制链接";
+
+    try {
+      await navigator.clipboard.writeText(window.location.href);
+    } catch (error) {
+      const input = document.createElement("input");
+      input.value = window.location.href;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      input.remove();
+    }
+
+    button.textContent = copiedText;
+    button.classList.add("is-copied");
+    window.setTimeout(() => {
+      button.textContent = defaultText;
+      button.classList.remove("is-copied");
+    }, 1800);
+  });
+}
+
+function optimizeArticleImages(container) {
+  container.querySelectorAll("img").forEach((img) => {
+    img.loading = "lazy";
+    img.decoding = "async";
+  });
+}
+
+function updateShareMeta(title, description) {
+  const setMeta = (selector, value) => {
+    const element = document.querySelector(selector);
+    if (element) element.setAttribute("content", value);
+  };
+
+  const pageTitle = `${title} | 元衍极`;
+  const pageUrl = window.location.href;
+  setMeta('meta[property="og:title"]', pageTitle);
+  setMeta('meta[name="twitter:title"]', pageTitle);
+  setMeta('meta[property="og:url"]', pageUrl);
+
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) canonical.setAttribute("href", pageUrl);
+
+  if (description) {
+    setMeta('meta[property="og:description"]', description);
+    setMeta('meta[name="twitter:description"]', description);
+    setMeta('meta[name="description"]', description);
+  }
+}
+
 async function loadArticle(articlePath) {
   try {
     const url = new URL(articlePath, window.location.href);
@@ -231,22 +347,22 @@ async function displayArticle() {
     return;
   }
 
+  setupArticleNav(articlePath);
+
   if (backEl) {
-    if (sourceParam === "life") {
-      backEl.href = "life.html";
-      backEl.textContent = "← 返回生活";
-    } else {
-      backEl.href = "blog.html";
-      backEl.textContent = "← 返回博客";
-    }
+    backEl.href = "blog.html";
+    backEl.textContent = "← 返回博客";
   }
 
   const navLinks = document.querySelectorAll(".nav a");
-  navLinks.forEach((link) => link.classList.remove("active"));
-  const activeHref = sourceParam === "life" ? "life.html" : "blog.html";
-  const activeLink = document.querySelector(`.nav a[href="${activeHref}"]`);
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    link.removeAttribute("aria-current");
+  });
+  const activeLink = document.querySelector('.nav a[href="blog.html"]');
   if (activeLink) {
     activeLink.classList.add("active");
+    activeLink.setAttribute("aria-current", "page");
   }
 
   if (window.location.protocol === "file:") {
@@ -272,8 +388,19 @@ async function displayArticle() {
     titleEl.textContent = title;
     document.title = `${title} | 元衍极`;
     contentEl.innerHTML = cleanHtml;
-    
-    // Process block math formulas in the DOM
+
+    const firstParagraph = contentEl.querySelector("p");
+    const summary = firstParagraph ? firstParagraph.textContent.trim().slice(0, 120) : "";
+    updateShareMeta(title, summary);
+
+    // The document title is already rendered in the page header; drop the duplicate H1.
+    const duplicateTitle = contentEl.querySelector("h1");
+    if (duplicateTitle && duplicateTitle.textContent.trim() === title) {
+      duplicateTitle.remove();
+    }
+
+    // Lazy-load article images and process block math formulas
+    optimizeArticleImages(contentEl);
     processBlockMathInDOM(contentEl);
     buildArticleToc(contentEl);
     requestAnimationFrame(updateReadingProgress);
@@ -305,8 +432,10 @@ window.addEventListener("resize", updateReadingProgress);
 // Initialize on page load
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", displayArticle);
+  document.addEventListener("DOMContentLoaded", setupCopyLink);
   document.addEventListener("DOMContentLoaded", updateReadingProgress);
 } else {
   displayArticle();
+  setupCopyLink();
   updateReadingProgress();
 }

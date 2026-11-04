@@ -11,10 +11,10 @@
 核心内容:
 
 - 🧠 博客系统: 话题系列 + 独立文章，支持搜索与排序
-- 🌿 生活系统: 与博客结构一致的低频记录
+- 🌿 生活记录: 与博客文章合并在同一页面，共享搜索与排序
 - 🧾 文章详情页: Markdown 渲染 + KaTeX 数学公式支持
 - 🌓 主题与语言: 明暗主题切换 + 中英文切换
-- 🧭 页面结构: 首页、关于、学术、生活、联系、相关链接
+- 🧭 页面结构: 首页（关于 + 学术）、博客（文章 + 生活）、联系方式（邮箱 + GitHub + 知乎 + 学术入口）
 
 ## ✍️ 添加文章
 
@@ -54,100 +54,29 @@
 { id: "life-single-2", title: "生活笔记", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
 ```
 
-## 🔗 添加相关链接
+## 🔗 编辑联系方式
 
-相关链接位于 `links.html`，分为“个人站点”和“学校与机构”两个分组。
+联系方式页 `contact.html` 使用四张卡片：邮箱、GitHub、知乎、学术入口。
 
-### 1) 复制链接条目
+### 1) 修改现有卡片
 
-在对应分组的 `.links-list` 中复制一条 `.links-row`，然后修改网址、名称、说明和域名。
+在 `.contact-primary` 中编辑对应 `.contact-primary-card` 的 `href`、标题与说明。邮箱卡片需要同时修改 `mailto:` 和显示文本。
 
-个人站点示例:
+### 2) 学术入口
 
-```html
-<a class="links-row" href="https://example.com/" target="_blank" rel="noopener">
-	<span class="links-index">03</span>
-	<span class="links-icon links-icon--person" aria-hidden="true"></span>
-	<span class="links-name">网站名称</span>
-	<span class="links-description" data-i18n="links.example.desc">网站简介</span>
-	<span class="links-domain">example.com</span>
-	<b>↗</b>
-</a>
-```
+学术入口卡片内的三个链接位于 `.contact-academic-links`，直接修改或增删其中的 `<a>` 即可。
 
-学校或机构链接可将图标类替换为:
+### 3) 中英文文案
 
-- `links-icon--university`: 学校
-- `links-icon--college`: 学院
-- `links-icon--research`: 研究机构
+编辑 `assets/js/main.js` 的 `translations.zh` / `translations.en`，为带 `data-i18n` 的文案添加同名键。
 
-### 2) 更新编号与数量
+## 📚 添加论文
 
-- 按当前顺序修改每条链接的 `.links-index`。
-- 修改对应分组标题右侧的数量。
-- 修改页面顶部 `.links-count strong` 中的链接总数。
+论文展示在 `index.html` 的“学术研究”区块中，采用卡片式布局。只需复制一篇现有论文并填充信息。
 
-### 3) 添加中英文文案
+### 论文条目
 
-编辑 `assets/js/main.js`，分别在 `translations.zh` 和 `translations.en` 中添加同名键:
-
-```js
-// translations.zh
-"links.example.desc": "网站简介",
-
-// translations.en
-"links.example.desc": "Website description",
-```
-
-如果名称也需要中英文切换，可同样给 `.links-name` 添加 `data-i18n`。
-
-## 📚 添加论文/项目
-
-论文与项目展示在 academic.html 中，采用卡片式布局。只需在对应列表中复制一条模板并填充信息。
-
-### 论文条目模板
-
-```html
-<article class="paper-card">
-	<div class="paper-header">
-		<span class="paper-label">arXiv · cs.AI</span>
-		<span class="paper-date">2025-12-10</span>
-	</div>
-	<h5 class="paper-title">论文标题</h5>
-	<p class="paper-authors">作者1, 作者2, 作者3</p>
-	<div class="paper-meta">
-		<span class="meta-pill">关键词1</span>
-		<span class="meta-pill">关键词2</span>
-		<span class="meta-pill">arXiv:xxxx.xxxxx</span>
-	</div>
-	<div class="paper-actions">
-		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">arXiv</a>
-		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">PDF</a>
-	</div>
-</article>
-```
-
-### 项目条目模板
-
-```html
-<article class="project-card">
-	<div class="project-header">
-		<span class="project-label">Project Type</span>
-		<span class="project-date">2025</span>
-	</div>
-	<h5 class="project-title">项目名称</h5>
-	<p class="project-authors">团队/角色说明</p>
-	<div class="project-meta">
-		<span class="meta-pill">标签1</span>
-		<span class="meta-pill">标签2</span>
-		<span class="meta-pill">状态或技术栈</span>
-	</div>
-	<div class="project-actions">
-		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">项目页</a>
-		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">文档</a>
-	</div>
-</article>
-```
+在首页“学术研究”区块复制一篇 `.academic-paper`，修改会议信息、标题、作者、标签和 arXiv/PDF 链接。
 
 ## 🖥️ 本地预览
 
@@ -178,10 +107,10 @@ This is a personal static website built with vanilla HTML/CSS/JavaScript and dep
 Core features:
 
 - 🧠 Blog system: topic series + standalone essays with search/sort
-- 🌿 Life system: mirrored structure for personal notes
+- 🌿 Life notes: merged into the blog page with shared search and sorting
 - 🧾 Article page: Markdown rendering + KaTeX math support
 - 🌓 Theme & language: light/dark mode + zh/en switch
-- 🧭 Pages: Home, About, Academic, Life, Contact, Links
+- 🧭 Pages: Home (About + Research), Blog (Articles + Life), Contact (Email + GitHub + Zhihu + Academic Profiles)
 
 ## ✍️ Add Articles
 
@@ -201,7 +130,7 @@ Edit assets/js/main.js and add an entry to the correct data structure:
 
 - Blog topic article: blogData.topics[x].articles
 - Blog standalone article: blogData.articles
-- Life article: lifeData.topics[x].articles or lifeData.articles
+- Life article: lifeData.topics[x].articles or lifeData.articles (shown in the Blog page alongside blog posts)
 
 Example (blog standalone article):
 
@@ -221,98 +150,29 @@ Example (life article):
 { id: "life-single-2", title: "Life Note", date: "2026-02-15", category: "Life", path: "life-articles/life-note.md" }
 ```
 
-## 🔗 Add Related Links
+## 🔗 Edit Contact
 
-Related links are maintained in `links.html` and grouped under Personal Sites and Universities & Institutes.
+The contact page (`contact.html`) uses four cards: Email, GitHub, Zhihu, and Academic Profiles.
 
-### 1) Copy a link row
+### 1) Edit an existing card
 
-Copy a `.links-row` inside the appropriate `.links-list`, then update its URL, name, description, and domain.
+Update the `href`, title, and description of the matching `.contact-primary-card` inside `.contact-primary`. For the email card, update both the `mailto:` link and the visible address.
 
-```html
-<a class="links-row" href="https://example.com/" target="_blank" rel="noopener">
-	<span class="links-index">03</span>
-	<span class="links-icon links-icon--person" aria-hidden="true"></span>
-	<span class="links-name">Website Name</span>
-	<span class="links-description" data-i18n="links.example.desc">Website description</span>
-	<span class="links-domain">example.com</span>
-	<b>↗</b>
-</a>
-```
+### 2) Academic profiles
 
-Available institution icon classes:
+The three profile links live inside `.contact-academic-links`. Edit or add `<a>` elements there.
 
-- `links-icon--university`: university
-- `links-icon--college`: school or college
-- `links-icon--research`: research institute
+### 3) Bilingual copy
 
-### 2) Update numbering and counts
+Add matching keys to `translations.zh` / `translations.en` in `assets/js/main.js` for any element using `data-i18n`.
 
-- Update each `.links-index` according to its order.
-- Update the count displayed beside the corresponding group heading.
-- Update the total inside `.links-count strong` at the top of the page.
+## 📚 Add Papers
 
-### 3) Add bilingual text
+Papers are rendered in the "Research" block of `index.html` using card entries. Copy an existing paper and fill in the metadata.
 
-Add matching keys to both `translations.zh` and `translations.en` in `assets/js/main.js`:
+### Paper entry
 
-```js
-// translations.zh
-"links.example.desc": "网站简介",
-
-// translations.en
-"links.example.desc": "Website description",
-```
-
-Add `data-i18n` to `.links-name` as well when the website name needs translation.
-
-## 📚 Add Papers/Projects
-
-The academic section is rendered in academic.html using card entries. Copy a template into the correct list and fill in the metadata.
-
-### Paper entry template
-
-```html
-<article class="paper-card">
-	<div class="paper-header">
-		<span class="paper-label">arXiv · cs.AI</span>
-		<span class="paper-date">2025-12-10</span>
-	</div>
-	<h5 class="paper-title">Paper Title</h5>
-	<p class="paper-authors">Author 1, Author 2, Author 3</p>
-	<div class="paper-meta">
-		<span class="meta-pill">Keyword 1</span>
-		<span class="meta-pill">Keyword 2</span>
-		<span class="meta-pill">arXiv:xxxx.xxxxx</span>
-	</div>
-	<div class="paper-actions">
-		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">arXiv</a>
-		<a class="paper-link" href="https://example.com" target="_blank" rel="noopener">PDF</a>
-	</div>
-</article>
-```
-
-### Project entry template
-
-```html
-<article class="project-card">
-	<div class="project-header">
-		<span class="project-label">Project Type</span>
-		<span class="project-date">2025</span>
-	</div>
-	<h5 class="project-title">Project Name</h5>
-	<p class="project-authors">Team or role</p>
-	<div class="project-meta">
-		<span class="meta-pill">Tag 1</span>
-		<span class="meta-pill">Tag 2</span>
-		<span class="meta-pill">Status or stack</span>
-	</div>
-	<div class="project-actions">
-		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">Project</a>
-		<a class="project-link" href="https://example.com" target="_blank" rel="noopener">Docs</a>
-	</div>
-</article>
-```
+Copy an existing `.academic-paper` block in the Research section of `index.html` and update the venue, title, authors, tags, and arXiv/PDF links.
 
 ## 🖥️ Local Preview
 
