@@ -5230,3 +5230,62 @@ h6,
     justify-content: flex-start;
   }
 }
+
+/* Keep the contact layout while bringing its links closer to the heading. */
+.contact-main-page {
+  padding-top: calc(var(--site-header-height) + 16px);
+}
+
+.contact-page .contact-hero {
+  min-height: 0;
+  padding: 18px 0 14px;
+}
+
+.contact-page .contact-hero h2 {
+  margin-bottom: 14px;
+}
+
+.contact-page .contact-primary.section {
+  margin-top: 20px;
+}
+
+@media (max-width: 720px) {
+  .contact-page .contact-hero {
+    padding-top: 12px;
+  }
+}
+
+/* Reduce the lead-in space on the other two primary pages. */
+.home-page .main,
+.blog-page .main {
+  padding-top: calc(var(--site-header-height) + 16px);
+}
+
+.home-page .home-hero {
+  padding-top: clamp(12px, 2vw, 26px);
+  padding-bottom: 26px;
+}
+
+.home-page .home-research.section {
+  margin-top: 36px;
+}
+
+.blog-page .blog-hero {
+  padding-top: 16px;
+  padding-bottom: 22px;
+}
+
+.blog-page .blog-manifesto {
+  min-height: 250px;
+}
+
+.blog-page .blog-tool-section {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 760px) {
+  .home-page .home-hero,
+  .blog-page .blog-hero {
+    padding-top: 12px;
+  }
+}
