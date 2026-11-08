@@ -80,7 +80,7 @@ const translations = {
   }
 };
 
-let currentLanguage = "zh";
+let currentLanguage = "en";
 let copyFeedbackTimer;
 
 function readStorage(key) {
@@ -269,8 +269,7 @@ langButtons.forEach((button) => {
 });
 
 const savedLanguage = readStorage("lang");
-const browserLanguage = (navigator.language || "zh").toLowerCase().startsWith("zh") ? "zh" : "en";
-setLanguage(savedLanguage === "en" || savedLanguage === "zh" ? savedLanguage : browserLanguage);
+setLanguage(savedLanguage === "en" || savedLanguage === "zh" ? savedLanguage : "en");
 setTheme(root.dataset.theme);
 
 function initialize() {
