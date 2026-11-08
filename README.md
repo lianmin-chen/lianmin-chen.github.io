@@ -18,18 +18,19 @@
 
 - 修改 `index.html` 中 About 区域的文案
 - 同步更新 `assets/js/main.js` 中 `translations.zh/en` 的 `about.profile.desc`
-- 经历条目位于 `.education-list` 中
+- 经历条目位于 `.education-list` 中的 `.education-card`
 
 ### 精选论文
 
-- 在 `index.html` 的「精选论文」区块复制一条 `.academic-paper`
+- 在 `index.html` 的「精选论文」区块复制一条 `.paper-card`
 - 修改会议、标题、作者、标签、链接与配图
-- 配图放在 `assets/images/`，在 `.academic-paper-figure img` 中引用
+- 配图放在 `assets/images/`，在 `.paper-figure img` 中引用
 
 ### 联系方式
 
-- 修改 `index.html` 底部 `.contact-primary` 中的四张卡片
-- 邮箱、GitHub、知乎与学术入口均在对应卡片内
+- 修改 `index.html` 底部 `.contact-grid` 中的三张 `.contact-card`（Email / GitHub / Zhihu）
+- 平台图标是页面顶部的 SVG sprite（`#icon-email` / `#icon-github` / `#icon-zhihu`），用 `<use href="#...">` 引用
+- 首屏个人信息卡底部的图标行位于 `.profile-links`，与联系区共用同一套 sprite
 
 ### 主题与语言
 

@@ -375,50 +375,8 @@ h3 {
   line-height: 1.95;
 }
 
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 28px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  min-height: 46px;
-  padding: 0 20px;
-  border: 1px solid transparent;
-  border-radius: 12px;
-  font-size: 0.92rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button--primary {
-  color: #fff;
-  background: #315aa4;
-  box-shadow: 0 12px 28px rgba(49, 90, 164, 0.2);
-}
-
-.button--secondary {
-  color: var(--heading);
-  background: var(--surface);
-  border-color: var(--line);
-}
-
-.button--secondary:hover {
-  border-color: var(--line-strong);
-}
-
 .research-interests {
-  margin-top: 32px;
+  margin-top: 26px;
 }
 
 .micro-label {
@@ -597,30 +555,47 @@ h3 {
   line-height: 1.55;
 }
 
+.svg-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.social-icon {
+  display: block;
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+
+.social-icon--lg {
+  width: 23px;
+  height: 23px;
+}
+
 .profile-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
 .profile-links a {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-  padding: 8px 10px;
-  color: var(--blue);
-  background: var(--tag-bg);
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  font-size: 0.76rem;
-  text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease;
+  justify-content: center;
+  width: 34px;
+  height: 36px;
+  color: var(--muted);
+  border-radius: 8px;
+  transition: color 0.2s ease, background 0.2s ease;
 }
 
-.profile-links a:hover {
+.profile-links a:hover,
+.profile-links a:focus-visible {
+  color: var(--blue);
   background: var(--surface-soft);
-  border-color: var(--line-strong);
 }
 
 .orbit {
@@ -1055,18 +1030,58 @@ h3 {
 }
 
 .contact-section {
+  /* 浅色主题：与页面其它卡片一致的浅色面板 */
+  --contact-bg: #ffffff;
+  --contact-glow: rgba(56, 100, 178, 0.09);
+  --contact-border: rgba(23, 32, 51, 0.11);
+  --contact-shadow: 0 24px 65px rgba(20, 32, 52, 0.08);
+  --contact-text: #5e6a7c;
+  --contact-heading: #101828;
+  --contact-eyebrow: #3864b2;
+  --contact-card-bg: rgba(56, 100, 178, 0.045);
+  --contact-card-border: rgba(23, 32, 51, 0.1);
+  --contact-card-hover-bg: rgba(56, 100, 178, 0.1);
+  --contact-card-hover-border: rgba(56, 100, 178, 0.3);
+  --contact-icon: #3864b2;
+  --contact-value: #172033;
+  --contact-value-hover: #3864b2;
+  --contact-copy: #5e6a7c;
+  --contact-copy-border: rgba(23, 32, 51, 0.2);
+  --contact-copy-hover-border: rgba(56, 100, 178, 0.45);
+
   display: flex;
   flex-direction: column;
   gap: clamp(24px, 3vw, 34px);
   margin-top: 88px;
   padding: clamp(34px, 5vw, 52px);
-  color: #dce7f6;
+  color: var(--contact-text);
   background:
-    radial-gradient(circle at 90% 0%, rgba(121, 169, 230, 0.16), transparent 40%),
-    #17243b;
-  border: 1px solid rgba(121, 169, 230, 0.16);
+    radial-gradient(circle at 90% 0%, var(--contact-glow), transparent 40%),
+    var(--contact-bg);
+  border: 1px solid var(--contact-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 24px 65px rgba(15, 28, 50, 0.14);
+  box-shadow: var(--contact-shadow);
+}
+
+html[data-theme="dark"] .contact-section {
+  /* 深色主题：保持深蓝强调块 */
+  --contact-bg: #17243b;
+  --contact-glow: rgba(121, 169, 230, 0.16);
+  --contact-border: rgba(121, 169, 230, 0.16);
+  --contact-shadow: 0 24px 65px rgba(15, 28, 50, 0.14);
+  --contact-text: #dce7f6;
+  --contact-heading: #f5f8fc;
+  --contact-eyebrow: #9dbfec;
+  --contact-card-bg: rgba(255, 255, 255, 0.045);
+  --contact-card-border: rgba(255, 255, 255, 0.1);
+  --contact-card-hover-bg: rgba(255, 255, 255, 0.08);
+  --contact-card-hover-border: rgba(255, 255, 255, 0.2);
+  --contact-icon: #c7dcf7;
+  --contact-value: #edf3fb;
+  --contact-value-hover: #ffffff;
+  --contact-copy: #c4d2e4;
+  --contact-copy-border: rgba(196, 210, 228, 0.28);
+  --contact-copy-hover-border: rgba(196, 210, 228, 0.6);
 }
 
 .contact-section::before {
@@ -1074,13 +1089,13 @@ h3 {
 }
 
 .contact-section .eyebrow {
-  color: #9dbfec;
+  color: var(--contact-eyebrow);
 }
 
 .contact-head h2 {
   max-width: 610px;
   margin-top: 10px;
-  color: #f5f8fc;
+  color: var(--contact-heading);
   font-size: clamp(1.75rem, 3vw, 2.45rem);
   line-height: 1.4;
 }
@@ -1097,8 +1112,8 @@ h3 {
   flex-direction: column;
   gap: 9px;
   padding: 20px 20px 18px;
-  background: rgba(255, 255, 255, 0.045);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--contact-card-bg);
+  border: 1px solid var(--contact-card-border);
   border-radius: 13px;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
@@ -1108,20 +1123,31 @@ a.contact-card {
 }
 
 a.contact-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--contact-card-hover-bg);
+  border-color: var(--contact-card-hover-border);
 }
 
 .contact-card-label {
-  color: #9dbfec;
+  color: var(--contact-icon);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
+.contact-card-head {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--contact-icon);
+}
+
+.contact-card-head .contact-card-label {
+  color: inherit;
+}
+
 .contact-card-value {
-  color: #edf3fb;
+  color: var(--contact-value);
   font-size: 0.95rem;
   font-weight: 600;
   line-height: 1.5;
@@ -1129,14 +1155,14 @@ a.contact-card:hover {
 }
 
 .contact-card-value:hover {
-  color: #ffffff;
+  color: var(--contact-value-hover);
 }
 
 .contact-card-arrow {
   position: absolute;
   top: 20px;
   right: 18px;
-  color: #9dbfec;
+  color: var(--contact-icon);
   font-style: normal;
   transition: transform 0.2s ease;
 }
@@ -1149,9 +1175,9 @@ a.contact-card:hover .contact-card-arrow {
   align-self: flex-start;
   margin-top: auto;
   padding: 5px 12px;
-  color: #c4d2e4;
+  color: var(--contact-copy);
   background: transparent;
-  border: 1px solid rgba(196, 210, 228, 0.28);
+  border: 1px solid var(--contact-copy-border);
   border-radius: 9px;
   font-size: 0.78rem;
   cursor: pointer;
@@ -1159,7 +1185,7 @@ a.contact-card:hover .contact-card-arrow {
 }
 
 .copy-button:hover {
-  border-color: rgba(196, 210, 228, 0.6);
+  border-color: var(--contact-copy-hover-border);
 }
 
 .site-footer {
@@ -1539,16 +1565,6 @@ a.contact-card:hover .contact-card-arrow {
 
   .hero-intro {
     font-size: 0.94rem;
-  }
-
-  .hero-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .button {
-    gap: 10px;
-    padding-inline: 14px;
   }
 
   .hero-quote p {
